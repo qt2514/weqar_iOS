@@ -70,15 +70,15 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
         
         let filterLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         filterLayout.scrollDirection = .horizontal
-        filterLayout.itemSize = CGSize(width: view.frame.size.width, height:(view.frame.size.height / 4))
+        filterLayout.itemSize = CGSize(width: 100, height: 30)
         filterLayout.minimumLineSpacing = 10
         
         let filterCollectionView:UICollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: filterLayout)
-        filterCollectionView.frame = CGRect(x: 5, y: 90 , width: (view.frame.size.width/4), height: 50)
+        filterCollectionView.frame = CGRect(x: 5, y: 90 , width: view.frame.size.width, height: 5)
         filterCollectionView.dataSource = self
         filterCollectionView.delegate = self
         filterCollectionView.register(DiscountCollectionViewCell.self, forCellWithReuseIdentifier: "filterCell")
-        filterCollectionView.backgroundColor = .white
+        filterCollectionView.backgroundColor = .cyan
         filterCollectionView.showsVerticalScrollIndicator = false
         filterCollectionView.showsHorizontalScrollIndicator = false
         
