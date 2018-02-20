@@ -74,7 +74,7 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
         filterLayout.minimumLineSpacing = 10
         
         let filterCollectionView:UICollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: filterLayout)
-        filterCollectionView.frame = CGRect(x: 5, y: 90 , width: view.frame.size.width, height: 5)
+        filterCollectionView.frame = CGRect(x: 5, y: 90 , width: view.frame.size.width, height: 50)
         filterCollectionView.dataSource = self
         filterCollectionView.delegate = self
         filterCollectionView.register(DiscountCollectionViewCell.self, forCellWithReuseIdentifier: "filterCell")
