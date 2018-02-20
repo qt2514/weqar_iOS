@@ -761,7 +761,7 @@
         <!--Profile View Controller-->
         <scene sceneID="pB6-yL-d6X">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="xKH-oP-1DF" customClass="ProfileViewController" customModule="Twotr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="xKH-oP-1DF" customClass="ProfileViewController" customModule="weqar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l7f-Uz-PMV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
