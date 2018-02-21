@@ -11,14 +11,17 @@ import UIKit
 
 class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
     
+    var rates = ["₹ 100","₹ 200","₹ 300","₹ 400","₹ 500"]
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "packageCell", for: indexPath as IndexPath) as! PackageCollectionViewCell
+        cell.priceLabel.text = rates[indexPath.row]
         cell.layer.cornerRadius = 15
-        cell.backgroundColor = .cyan
+        cell.backgroundColor = .white
         cell.clipsToBounds = true
         return cell
     }
@@ -365,15 +368,16 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         
         let packagelayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         packagelayout.scrollDirection = .horizontal
-        packagelayout.itemSize = CGSize(width: view.frame.size.width - 100, height:view.frame.size.height - (180 + (view.frame.size.width/3)))
+        packagelayout.itemSize = CGSize(width: view.frame.size.width - 100, height:view.frame.size.height - (160 + (view.frame.size.width/3)))
+        packagelayout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10)
         packagelayout.minimumLineSpacing = 10
         
         let packageCollectionView:UICollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: packagelayout)
-        packageCollectionView.frame = CGRect(x: 5, y: 0 , width: view.frame.size.width - 10, height: view.frame.size.height - (150 + (view.frame.size.width/3)))
+        packageCollectionView.frame = CGRect(x: 0, y: 0 , width: view.frame.size.width , height: view.frame.size.height - (150 + (view.frame.size.width/3)))
         packageCollectionView.dataSource = self
         packageCollectionView.delegate = self
         packageCollectionView.register(PackageCollectionViewCell.self, forCellWithReuseIdentifier: "packageCell")
-        packageCollectionView.backgroundColor = .white
+        packageCollectionView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         packageCollectionView.showsVerticalScrollIndicator = false
         packageCollectionView.showsHorizontalScrollIndicator = false
         
@@ -383,8 +387,8 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         
         let complete = UIButton()
         complete.frame = CGRect(x: (view.frame.size.width/2) - 75, y: (completeScrollView.frame.height - 50), width: 150, height: 40)
-        complete.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        complete.backgroundColor = UIColor(rgb: 0x009a3d)
+        complete.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        complete.backgroundColor = UIColor(rgb: 0x009A3d)
         complete.addTarget(self, action: #selector(completeButton), for: UIControlEvents.touchUpInside)
         complete.setTitle("Complete", for: .normal)
         complete.titleLabel?.textAlignment = .center
