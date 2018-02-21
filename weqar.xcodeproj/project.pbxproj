@@ -10,6 +10,7 @@
 		030F04AA2035AEE3000553D6 /* DiscountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F04A92035AEE3000553D6 /* DiscountCollectionViewCell.swift */; };
 		031F2A7C202996B9008B1EA1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F2A7B202996B9008B1EA1 /* UIColor.swift */; };
 		031F2A862029E405008B1EA1 /* VideoSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F2A852029E405008B1EA1 /* VideoSplashViewController.swift */; };
+		033FCFE1203D9F9C001F4F1C /* PackageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033FCFE0203D9F9B001F4F1C /* PackageCollectionViewCell.swift */; };
 		035E34CE2034CD5000E0D952 /* DiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E34CD2034CD5000E0D952 /* DiscountViewController.swift */; };
 		035E34D02034DA5F00E0D952 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E34CF2034DA5F00E0D952 /* TabBarViewController.swift */; };
 		037310D6203B123400ECD2A8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037310D5203B123400ECD2A8 /* ProfileViewController.swift */; };
@@ -54,6 +55,7 @@
 		031F2A852029E405008B1EA1 /* VideoSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSplashViewController.swift; sourceTree = "<group>"; };
 		031F2A882029E8B0008B1EA1 /* SwiftyGif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyGif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		031F2A892029EC1A008B1EA1 /* splashVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = splashVideo.mp4; sourceTree = "<group>"; };
+		033FCFE0203D9F9B001F4F1C /* PackageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCollectionViewCell.swift; sourceTree = "<group>"; };
 		035E34CD2034CD5000E0D952 /* DiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewController.swift; sourceTree = "<group>"; };
 		035E34CF2034DA5F00E0D952 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		037310D5203B123400ECD2A8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				030F04A92035AEE3000553D6 /* DiscountCollectionViewCell.swift */,
+				033FCFE0203D9F9B001F4F1C /* PackageCollectionViewCell.swift */,
 				037310E5203C4E5B00ECD2A8 /* FilterCollectionViewCell.swift */,
 			);
 			path = "Collection View";
@@ -562,6 +565,7 @@
 				035E34D02034DA5F00E0D952 /* TabBarViewController.swift in Sources */,
 				037310D8203B509F00ECD2A8 /* EventViewController.swift in Sources */,
 				031F2A862029E405008B1EA1 /* VideoSplashViewController.swift in Sources */,
+				033FCFE1203D9F9C001F4F1C /* PackageCollectionViewCell.swift in Sources */,
 				037310D6203B123400ECD2A8 /* ProfileViewController.swift in Sources */,
 				030F04AA2035AEE3000553D6 /* DiscountCollectionViewCell.swift in Sources */,
 				037310DA203B50B300ECD2A8 /* JobsViewController.swift in Sources */,
