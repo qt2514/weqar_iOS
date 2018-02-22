@@ -18,12 +18,13 @@ class FilterCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         
-        filterLabel.frame = CGRect(x:20, y: (((6 * self.frame.size.height) / 10) + 20) , width: ((self.frame.size.width) - 50) , height: 15)
+        filterLabel.frame = CGRect(x:20, y: 10 , width: filterLabel.frame.size.width + 10 , height: 30)
         filterLabel.font = UIFont.boldSystemFont(ofSize: 12.0)
-        filterLabel.adjustsFontSizeToFitWidth = true
+        filterLabel.backgroundColor = UIColor(rgb: 0x009a3d)
         filterLabel.textAlignment = .center
+        filterLabel.sizeToFit()
         filterLabel.textColor = .white
-        filterLabel.text = "Period January 07 2018 Don't miss it!"
+        filterLabel.text = "chicken"
         contentView.addSubview(filterLabel)
         
     

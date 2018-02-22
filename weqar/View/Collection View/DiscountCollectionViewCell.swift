@@ -17,7 +17,6 @@ class DiscountCollectionViewCell: UICollectionViewCell {
         var view = UIView()
         return view
     }()
-    
     var follow: UIButton = {
         var but = UIButton()
         return but
@@ -55,18 +54,21 @@ class DiscountCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        cellView.frame = CGRect(x: 0, y: 0, width: contentView.frame.size.width, height: contentView.frame.size.height)
-        contentView.addSubview(cellView)
+//        contentView.layer.cornerRadius = 100
+//        cellView.frame = CGRect(x: 2, y: 0, width: contentView.frame.size.width - 4, height: contentView.frame.size.height)
+//        contentView.backgroundColor = .yellow
+//        contentView.addSubview(cellView)
 
-        banner.frame = CGRect(x: 0, y: 0, width: cellView.frame.size.width, height: cellView.frame.size.height)
+        banner.frame = CGRect(x: 0, y: 0, width: contentView.frame.size.width, height: contentView.frame.size.height)
         banner.image = UIImage(named:"banner")
-        cellView.addSubview(banner)
+        banner.contentMode = .scaleToFill
+        contentView.addSubview(banner)
 
-        card.frame = CGRect(x: 0, y: 0, width: ((cellView.frame.size.width) * 0.60), height: cellView.frame.size.height)
+        card.frame = CGRect(x: 0, y: 0, width: ((banner.frame.size.width) * 0.60), height: banner.frame.size.height)
         card.image = UIImage(named:"greycard")
-        cellView.addSubview(card)
+        banner.addSubview(card)
 
-        offer.frame = CGRect(x:20, y: ((6 * self.frame.size.height) / 10), width: ((card.frame.size.width) - 60), height: 20)
+        offer.frame = CGRect(x:20, y: ((6 * card.frame.size.height) / 10), width: ((card.frame.size.width) - 60), height: 20)
         offer.font = UIFont.boldSystemFont(ofSize: 16.0)
         offer.adjustsFontSizeToFitWidth = true
         offer.textAlignment = .left
@@ -74,7 +76,7 @@ class DiscountCollectionViewCell: UICollectionViewCell {
         offer.text = "75% Discount in KFC"
         card.addSubview(offer)
 
-        period.frame = CGRect(x:20, y: (((6 * self.frame.size.height) / 10) + 20) , width: ((card.frame.size.width) - 50) , height: 15)
+        period.frame = CGRect(x:20, y: (((6 * card.frame.size.height) / 10) + 20) , width: ((card.frame.size.width) - 50) , height: 15)
         period.font = UIFont.boldSystemFont(ofSize: 12.0)
         period.adjustsFontSizeToFitWidth = true
         period.textAlignment = .left
@@ -82,7 +84,7 @@ class DiscountCollectionViewCell: UICollectionViewCell {
         period.text = "Period January 07 2018 Don't miss it!"
         card.addSubview(period)
 
-        star.frame = CGRect(x: 20, y: (((6 * self.frame.size.height) / 10) + 35), width: 80, height: 15)
+        star.frame = CGRect(x: 20, y: (((6 * card.frame.size.height) / 10) + 35), width: 80, height: 15)
         star.image = UIImage(named:"star")
         card.addSubview(star)
 
@@ -93,7 +95,7 @@ class DiscountCollectionViewCell: UICollectionViewCell {
         logo.layer.borderColor = anotherColor.cgColor
         card.addSubview(logo)
 
-        follow.frame = CGRect(x: self.frame.width - 90, y: 15, width: 70, height: 20)
+        follow.frame = CGRect(x: banner.frame.width - 90, y: 15, width: 70, height: 20)
         follow.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
         follow.backgroundColor = UIColor(rgb: 0x009a3d)
         follow.setTitle("Unfollow", for: .normal)
@@ -102,7 +104,7 @@ class DiscountCollectionViewCell: UICollectionViewCell {
         banner.addSubview(follow)
 
 
-        locationIcon.frame = CGRect(x: ((self.frame.size.width) - 30), y: ((self.frame.size.height) - 24), width: 12, height: 17)
+        locationIcon.frame = CGRect(x: ((banner.frame.size.width) - 30), y: ((banner.frame.size.height) - 24), width: 12, height: 17)
         locationIcon.image = UIImage(named:"location")
         banner.addSubview(locationIcon)
     }

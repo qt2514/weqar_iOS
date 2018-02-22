@@ -11,7 +11,21 @@ import UIKit
 
 class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
     
+    var anotherColor = UIColor(red: 0.0/255.0, green: 154.0/255.0, blue: 61.0/255.0, alpha: 1.0)
+    var basicColor = UIColor(red: 209.0/255.0, green: 209.0/255.0, blue: 209.0/255.0,alpha: 1.0)
+
     var rates = ["₹ 100","₹ 200","₹ 300","₹ 400","₹ 500"]
+    
+    var firstNameView = UIView()
+    var middleNameView = UIView()
+    var lastNameView = UIView()
+    var mobileNumberView = UIView()
+    var addressView = UIView()
+    var cityView = UIView()
+    var zipCodeView = UIView()
+    var CIDnoView = UIView()
+    var memberNoTF = UIView()
+    var validView = UIView()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
@@ -30,6 +44,84 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+        func textFieldDidBeginEditing(_ textField: UITextField) {
+            self.resetColor()
+            if (textField.tag == 1) {
+                print("ajksdgfkjhvf")
+                firstNameView.backgroundColor = UIColor(rgb: 0x009a3d)
+                firstNameView.layer.borderColor = anotherColor.cgColor
+    
+            }else if (textField.tag == 2) {
+    
+                middleNameView.backgroundColor = UIColor(rgb: 0x009a3d)
+    
+            }else if (textField.tag == 3) {
+                lastNameView.backgroundColor = UIColor(rgb: 0x009a3d)
+    
+    
+            }else if (textField.tag == 4) {
+    
+                mobileNumberView.backgroundColor = UIColor(rgb: 0x009a3d)
+    
+            }else if (textField.tag == 5) {
+    
+                addressView.backgroundColor = UIColor(rgb: 0x009a3d)
+    
+            }else if (textField.tag == 6) {
+    
+                cityView.backgroundColor = UIColor(rgb: 0x009a3d)
+    
+            }else if (textField.tag == 7) {
+    
+                zipCodeView.backgroundColor = UIColor(rgb: 0x009a3d)
+    
+    
+            }else if (textField.tag == 8) {
+    
+                CIDnoView.backgroundColor = UIColor(rgb: 0x009a3d)
+    
+    
+            }else if (textField.tag == 9) {
+    
+                memberNoTF.backgroundColor = UIColor(rgb: 0x009a3d)
+    
+    
+            }else if (textField.tag == 10) {
+    
+                validView.backgroundColor = UIColor(rgb: 0x009a3d)
+    
+            }else {
+                firstNameView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+                middleNameView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+                lastNameView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+                mobileNumberView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+                addressView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+                cityView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+                zipCodeView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+                CIDnoView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+                memberNoTF.backgroundColor = UIColor(rgb: 0xd1d1d1)
+                validView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+            }
+    
+        }
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.resetColor()
+            return true
+        }
+    
+        func resetColor() {
+            self.firstNameView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+            self.lastNameView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+            self.lastNameView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+            self.mobileNumberView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+            self.addressView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+            self.cityView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+            self.zipCodeView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+            self.CIDnoView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+            self.memberNoTF.backgroundColor = UIColor(rgb: 0xd1d1d1)
+            self.validView.backgroundColor = UIColor(rgb: 0xd1d1d1)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,11 +168,19 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         view.addSubview(imageThree)
         
         let basicScrollView = UIScrollView()
-        basicScrollView.contentSize = CGSize(width: self.view.frame.width, height: (view.frame.size.width/3) + 670)
+        basicScrollView.contentSize = CGSize(width: self.view.frame.width, height: (view.frame.size.width/3) + 665)
         basicScrollView.frame = CGRect(x: 0, y: 90 + (view.frame.size.width/3), width: self.view.frame.width, height: (self.view.frame.height - (90 + (view.frame.size.width/3))))
         basicScrollView.backgroundColor = .white
         basicScrollView.isScrollEnabled = true
         self.view.addSubview(basicScrollView)
+        
+        let profileImageEdit = UIButton()
+        profileImageEdit.frame = CGRect(x: (2*(view.frame.size.width/3)) - (view.frame.size.width/18) , y:30, width: (view.frame.size.width/12), height: (view.frame.size.width/12))
+        profileImageEdit.backgroundColor = UIColor(rgb: 0x009a3d)
+        profileImageEdit.setImage(UIImage(named: "edit"), for: .normal)
+        profileImageEdit.titleLabel?.textAlignment = .center
+        profileImageEdit.layer.cornerRadius = (view.frame.size.width/24)
+        basicScrollView.addSubview(profileImageEdit)
         
         var profileImage = UIImageView()
         profileImage.frame = CGRect(x: (view.frame.size.width/3), y:30, width: (view.frame.size.width/3), height: (view.frame.size.width/3))
@@ -95,11 +195,12 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         firstNameTF.font = UIFont.systemFont(ofSize: 16)
         firstNameTF.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         firstNameTF.delegate = self
+        firstNameTF.tag = 1
         basicScrollView.addSubview(firstNameTF)
         
         var firstNameView = UIView()
         firstNameView.frame = CGRect(x: 20, y: (view.frame.size.width/3) + 80, width: (view.frame.size.width - 40), height: 01)
-        firstNameView.backgroundColor = UIColor(rgb: 0x009a3d)
+        firstNameView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         basicScrollView.addSubview(firstNameView)
         
         var middleNameTF = UITextField()
@@ -107,12 +208,13 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         middleNameTF.placeholder = "Middle Name"
         middleNameTF.font = UIFont.systemFont(ofSize: 16)
         middleNameTF.contentVerticalAlignment = UIControlContentVerticalAlignment.center
+        middleNameTF.tag = 2
         middleNameTF.delegate = self
         basicScrollView.addSubview(middleNameTF)
         
         var middleNameView = UIView()
         middleNameView.frame = CGRect(x: 20, y: (view.frame.size.width/3) + 150, width: (view.frame.size.width - 40), height: 01)
-        middleNameView.backgroundColor = UIColor(rgb: 0x009a3d)
+        middleNameView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         basicScrollView.addSubview(middleNameView)
         
         var lastNameTF = UITextField()
@@ -121,16 +223,17 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         lastNameTF.font = UIFont.systemFont(ofSize: 16)
         lastNameTF.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         lastNameTF.delegate = self
+        lastNameTF.tag = 3
         basicScrollView.addSubview(lastNameTF)
         
         var lastNameView = UIView()
         lastNameView.frame = CGRect(x: 20, y: (view.frame.size.width/3) + 220, width: (view.frame.size.width - 40), height: 01)
-        lastNameView.backgroundColor = UIColor(rgb: 0x009a3d)
+        lastNameView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         basicScrollView.addSubview(lastNameView)
         
         var codeView = UIView()
         codeView.frame = CGRect(x: 20, y: (view.frame.size.width/3) + 290, width: 50, height: 01)
-        codeView.backgroundColor = UIColor(rgb: 0x009a3d)
+        codeView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         basicScrollView.addSubview(codeView)
         
         var mobileNumberTF = UITextField()
@@ -139,11 +242,12 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         mobileNumberTF.font = UIFont.systemFont(ofSize: 16)
         mobileNumberTF.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         mobileNumberTF.delegate = self
+        mobileNumberTF.tag = 4
         basicScrollView.addSubview(mobileNumberTF)
         
         var mobileNumberView = UIView()
         mobileNumberView.frame = CGRect(x: 80, y: (view.frame.size.width/3) + 290, width: (view.frame.size.width - 100), height: 01)
-        mobileNumberView.backgroundColor = UIColor(rgb: 0x009a3d)
+        mobileNumberView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         basicScrollView.addSubview(mobileNumberView)
         
         var addressTF = UITextField()
@@ -152,11 +256,12 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         addressTF.font = UIFont.systemFont(ofSize: 16)
         addressTF.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         addressTF.delegate = self
+        addressTF.tag = 5
         basicScrollView.addSubview(addressTF)
         
         var addressView = UIView()
         addressView.frame = CGRect(x: 20, y: (view.frame.size.width/3) + 360, width: (view.frame.size.width - 40), height: 01)
-        addressView.backgroundColor = UIColor(rgb: 0x009a3d)
+        addressView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         basicScrollView.addSubview(addressView)
         
         var cityTF = UITextField()
@@ -165,11 +270,12 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         cityTF.font = UIFont.systemFont(ofSize: 16)
         cityTF.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         cityTF.delegate = self
+        cityTF.tag = 6
         basicScrollView.addSubview(cityTF)
         
         var cityView = UIView()
         cityView.frame = CGRect(x: 20, y: (view.frame.size.width/3) + 430, width: (view.frame.size.width - 40), height: 01)
-        cityView.backgroundColor = UIColor(rgb: 0x009a3d)
+        cityView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         basicScrollView.addSubview(cityView)
         
         var zipCodeTF = UITextField()
@@ -178,16 +284,17 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         zipCodeTF.font = UIFont.systemFont(ofSize: 16)
         zipCodeTF.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         zipCodeTF.delegate = self
+        zipCodeTF.tag = 7
         basicScrollView.addSubview(zipCodeTF)
         
         var zipCodeView = UIView()
         zipCodeView.frame = CGRect(x: 20, y: (view.frame.size.width/3) + 500, width: (view.frame.size.width - 40), height: 01)
-        zipCodeView.backgroundColor = UIColor(rgb: 0x009a3d)
+        zipCodeView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         basicScrollView.addSubview(zipCodeView)
         
         var countryView = UIView()
         countryView.frame = CGRect(x: 20, y: (view.frame.size.width/3) + 570, width: (view.frame.size.width - 40), height: 01)
-        countryView.backgroundColor = UIColor(rgb: 0x009a3d)
+        countryView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         basicScrollView.addSubview(countryView)
         
         let basicNext = UIButton()
@@ -244,7 +351,7 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         view.addSubview(imageThree)
         
         let professionalScrollView = UIScrollView()
-        professionalScrollView.contentSize = CGSize(width: self.view.frame.width, height: 485)
+        professionalScrollView.contentSize = CGSize(width: self.view.frame.width, height: 500)
         professionalScrollView.frame = CGRect(x: 0, y: 90 + (view.frame.size.width/3), width: self.view.frame.width, height: (self.view.frame.height - (90 + (view.frame.size.width/3))))
         professionalScrollView.backgroundColor = .white
         professionalScrollView.isScrollEnabled = true
@@ -256,11 +363,12 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         CIDnoTF.font = UIFont.systemFont(ofSize: 16)
         CIDnoTF.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         CIDnoTF.delegate = self
+        CIDnoTF.tag = 8
         professionalScrollView.addSubview(CIDnoTF)
         
         var CIDnoView = UIView()
         CIDnoView.frame = CGRect(x: 20, y:  80, width: (view.frame.size.width - 40), height: 01)
-        CIDnoView.backgroundColor = UIColor(rgb: 0x009a3d)
+        CIDnoView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         professionalScrollView.addSubview(CIDnoView)
         
         var memberNoTF = UITextField()
@@ -269,11 +377,12 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         memberNoTF.font = UIFont.systemFont(ofSize: 16)
         memberNoTF.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         memberNoTF.delegate = self
+        memberNoTF.tag = 9
         professionalScrollView.addSubview(memberNoTF)
         
         var memberNoView = UIView()
         memberNoView.frame = CGRect(x: 20, y:  150, width: (view.frame.size.width - 40), height: 01)
-        memberNoView.backgroundColor = UIColor(rgb: 0x009a3d)
+        memberNoView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         professionalScrollView.addSubview(memberNoView)
         
         var validTF = UITextField()
@@ -282,11 +391,12 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         validTF.font = UIFont.systemFont(ofSize: 16)
         validTF.contentVerticalAlignment = UIControlContentVerticalAlignment.center
         validTF.delegate = self
+        validTF.tag = 10
         professionalScrollView.addSubview(validTF)
         
         var validView = UIView()
         validView.frame = CGRect(x: 20, y:  220, width: (view.frame.size.width - 40), height: 01)
-        validView.backgroundColor = UIColor(rgb: 0x009a3d)
+        validView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         professionalScrollView.addSubview(validView)
         
         var uploadImageLabel = UILabel()
@@ -308,7 +418,7 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         professionalScrollView.addSubview(uploadImageButton)
         
         let professionalNext = UIButton()
-        professionalNext.frame = CGRect(x: (view.frame.size.width/2) - 75, y: 425, width: 150, height: 40)
+        professionalNext.frame = CGRect(x: (view.frame.size.width/2) - 75, y: 435, width: 150, height: 40)
         professionalNext.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         professionalNext.backgroundColor = UIColor(rgb: 0x009a3d)
         professionalNext.addTarget(self, action: #selector(professionalNextButton), for: UIControlEvents.touchUpInside)

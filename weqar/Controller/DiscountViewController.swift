@@ -38,8 +38,7 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "discountCell", for: indexPath as IndexPath) as! DiscountCollectionViewCell
-        cell.layer.cornerRadius = 20
-        cell.clipsToBounds = true
+//        cell.layer.cornerRadius = 25
         return cell
     }
 
@@ -51,11 +50,12 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
 
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: view.frame.size.width, height:(view.frame.size.height / 4))
+        layout.itemSize = CGSize(width: view.frame.size.width - 20, height:(view.frame.size.height / 4))
+        layout.sectionInset = UIEdgeInsets(top: 20, left:10, bottom: 00, right: 10)
         layout.minimumLineSpacing = 10
 
         let myCollectionView:UICollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        myCollectionView.frame = CGRect(x: 5, y: 90 , width: view.frame.size.width - 10, height: view.frame.size.height - 139)
+        myCollectionView.frame = CGRect(x: 0, y: 90 , width: view.frame.size.width, height: view.frame.size.height - 139)
         myCollectionView.dataSource = self
         myCollectionView.delegate = self
         myCollectionView.register(DiscountCollectionViewCell.self, forCellWithReuseIdentifier: "discountCell")
@@ -102,34 +102,35 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
 //        return true
 //    }
 //    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        if collectionView == self.myCollectionView {
+////        if collectionView == myCollectionView {
 //            return 5
-//        }else {
-//            return 8
-//        }
+////        }else {
+////            return 8
+////        }
 //
 //    }
 //
 //    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        if collectionView == self.myCollectionView {
+////        if collectionView == myCollectionView {
 //            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "discountCell", for: indexPath as IndexPath) as! DiscountCollectionViewCell
 //            cell.layer.cornerRadius = 18
 //            cell.clipsToBounds = true
 //            return cell
 //        }
-//
-//        else {
-//            let FilterCell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath as IndexPath) as! FilterCollectionViewCell
-//            FilterCell.layer.cornerRadius = 18
-//            FilterCell.clipsToBounds = true
-//            return FilterCell
-//        }
-//
-//    }
+////
+////        else {
+////            let FilterCell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath as IndexPath) as! FilterCollectionViewCell
+////            FilterCell.layer.cornerRadius = 15
+////            FilterCell.clipsToBounds = true
+////            return FilterCell
+////        }
+////
+////    }
 //
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //        searchTF.delegate = self
+//        
 //        //        searchView.layer.borderColor = UIColor(hex: "009a3d") as! CGColor
 //
 //        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -147,17 +148,18 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
 //        myCollectionView.showsHorizontalScrollIndicator = false
 //
 //        self.view.addSubview(myCollectionView)
-//        myCollectionView.translatesAutoresizingMaskIntoConstraints = false
-//        edgesForExtendedLayout = []
+////        myCollectionView.translatesAutoresizingMaskIntoConstraints = false
+//        
 //
-//
+////
 ////        let filterLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
 ////        filterLayout.scrollDirection = .horizontal
 ////        filterLayout.itemSize = CGSize(width: 100, height: 30)
+////        filterLayout.sectionInset = UIEdgeInsets(top: 10, left:0, bottom: 10, right: 0)
 ////        filterLayout.minimumLineSpacing = 10
 ////
 ////        let filterCollectionView:UICollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: filterLayout)
-////        filterCollectionView.frame = CGRect(x: 5, y: 90 , width: view.frame.size.width - 10, height: 50)
+////        filterCollectionView.frame = CGRect(x: 0, y: 90 , width: view.frame.size.width, height: 50)
 ////        filterCollectionView.dataSource = self
 ////        filterCollectionView.delegate = self
 ////        filterCollectionView.register(FilterCollectionViewCell.self, forCellWithReuseIdentifier: "filterCell")
@@ -167,8 +169,7 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
 ////
 ////        self.view.addSubview(filterCollectionView)
 ////        filterCollectionView.translatesAutoresizingMaskIntoConstraints = false
-////        edgesForExtendedLayout = []
-//
+////
 //
 //    }
 //
@@ -180,6 +181,10 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
 //
 //
 //}
-//
-//
-//
+
+
+
+
+
+
+
