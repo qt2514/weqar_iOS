@@ -18,7 +18,7 @@ class FilterCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         
-        filterLabel.frame = CGRect(x:20, y: 10 , width: filterLabel.frame.size.width + 10 , height: 30)
+        filterLabel.frame = CGRect(x:0, y: 10 , width: filterLabel.frame.size.width + 10 , height: 30)
         filterLabel.font = UIFont.boldSystemFont(ofSize: 12.0)
         filterLabel.backgroundColor = UIColor(rgb: 0x009a3d)
         filterLabel.textAlignment = .center

@@ -68,7 +68,7 @@ class DiscountCollectionViewCell: UICollectionViewCell {
         card.image = UIImage(named:"greycard")
         banner.addSubview(card)
 
-        offer.frame = CGRect(x:20, y: ((6 * card.frame.size.height) / 10), width: ((card.frame.size.width) - 60), height: 20)
+        offer.frame = CGRect(x:10, y: ((6 * card.frame.size.height) / 10), width: ((card.frame.size.width) - 60), height: 20)
         offer.font = UIFont.boldSystemFont(ofSize: 16.0)
         offer.adjustsFontSizeToFitWidth = true
         offer.textAlignment = .left
@@ -76,7 +76,7 @@ class DiscountCollectionViewCell: UICollectionViewCell {
         offer.text = "75% Discount in KFC"
         card.addSubview(offer)
 
-        period.frame = CGRect(x:20, y: (((6 * card.frame.size.height) / 10) + 20) , width: ((card.frame.size.width) - 50) , height: 15)
+        period.frame = CGRect(x:10, y: (((6 * card.frame.size.height) / 10) + 20) , width: ((card.frame.size.width) - 50) , height: 15)
         period.font = UIFont.boldSystemFont(ofSize: 12.0)
         period.adjustsFontSizeToFitWidth = true
         period.textAlignment = .left
@@ -84,7 +84,7 @@ class DiscountCollectionViewCell: UICollectionViewCell {
         period.text = "Period January 07 2018 Don't miss it!"
         card.addSubview(period)
 
-        star.frame = CGRect(x: 20, y: (((6 * card.frame.size.height) / 10) + 35), width: 80, height: 15)
+        star.frame = CGRect(x: 10, y: (((6 * card.frame.size.height) / 10) + 35), width: 80, height: 15)
         star.image = UIImage(named:"star")
         card.addSubview(star)
 

@@ -7,10 +7,11 @@
 //
 
 import UIKit
-
+import DropDown
 
 class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
     
+    let dropDown = DropDown()
     var anotherColor = UIColor(red: 0.0/255.0, green: 154.0/255.0, blue: 61.0/255.0, alpha: 1.0)
     var basicColor = UIColor(red: 209.0/255.0, green: 209.0/255.0, blue: 209.0/255.0,alpha: 1.0)
 
@@ -231,6 +232,15 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         lastNameView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         basicScrollView.addSubview(lastNameView)
         
+        let codeButton = UIButton()
+        codeButton.frame = CGRect(x: 25, y: (view.frame.size.width/3) + 250, width: 50, height: 30)
+        codeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        codeButton.setTitleColor(UIColor(rgb: 0xd1d1d1), for: .normal)
+        codeButton.addTarget(self, action: #selector(codeButtonClicked), for: UIControlEvents.touchUpInside)
+        codeButton.setTitle("Code", for: .normal)
+        codeButton.contentHorizontalAlignment = .left
+        basicScrollView.addSubview(codeButton)
+        
         var codeView = UIView()
         codeView.frame = CGRect(x: 20, y: (view.frame.size.width/3) + 290, width: 50, height: 01)
         codeView.backgroundColor = UIColor(rgb: 0xd1d1d1)
@@ -292,6 +302,15 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         zipCodeView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         basicScrollView.addSubview(zipCodeView)
         
+        let countryButton = UIButton()
+        countryButton.frame = CGRect(x: 25, y: (view.frame.size.width/3) + 530, width: (view.frame.size.width - 50), height: 30)
+        countryButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        countryButton.setTitleColor(UIColor(rgb: 0xd1d1d1), for: .normal)
+        countryButton.addTarget(self, action: #selector(countryButtonClicked), for: UIControlEvents.touchUpInside)
+        countryButton.setTitle("Select Country", for: .normal)
+        countryButton.contentHorizontalAlignment = .left
+        basicScrollView.addSubview(countryButton)
+        
         var countryView = UIView()
         countryView.frame = CGRect(x: 20, y: (view.frame.size.width/3) + 570, width: (view.frame.size.width - 40), height: 01)
         countryView.backgroundColor = UIColor(rgb: 0xd1d1d1)
@@ -299,7 +318,7 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         
         let basicNext = UIButton()
         basicNext.frame = CGRect(x: (view.frame.size.width/2) - 75, y: (view.frame.size.width/3) + 600, width: 150, height: 40)
-        basicNext.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        basicNext.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         basicNext.backgroundColor = UIColor(rgb: 0x009a3d)
         basicNext.addTarget(self, action: #selector(basicNextButton), for: UIControlEvents.touchUpInside)
         basicNext.setTitle("Save and Next", for: .normal)
@@ -307,6 +326,32 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         basicNext.layer.cornerRadius = 5
         basicScrollView.addSubview(basicNext)
 
+    }
+    @objc func codeButtonClicked(sender:UIButton!) {
+        dropDown.anchorView = sender
+        dropDown.bottomOffset = CGPoint(x: 0, y: sender.bounds.height)
+        dropDown.width = 200
+        dropDown.backgroundColor = UIColor(rgb: 0xd1d1d1)
+        dropDown.textColor = UIColor.black
+        dropDown.dataSource = ["+91","+965","+1","+64"]
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            //            self.countryButton.titleLabel?.text = item
+            //            self.genderStr = item as NSString
+        }
+        dropDown.show()
+    }
+    @objc func countryButtonClicked(sender:UIButton!) {
+        dropDown.anchorView = sender
+        dropDown.bottomOffset = CGPoint(x: 0, y: sender.bounds.height)
+        dropDown.width = 200
+        dropDown.backgroundColor = UIColor(rgb: 0xd1d1d1)
+        dropDown.textColor = UIColor.black
+        dropDown.dataSource = ["India","Kuwait","Canada","New Zealand"]
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            //            self.countryButton.titleLabel?.text = item
+            //            self.genderStr = item as NSString
+        }
+        dropDown.show()
     }
     @objc func basicNextButton(sender:UIButton!) {
         var viewOne = UIView()
@@ -410,7 +455,7 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         uploadImageButton.setTitle("+", for: .normal)
         uploadImageButton.titleLabel?.textAlignment = .center
         uploadImageButton.setTitleColor(UIColor(rgb: 0xd1d1d1), for: UIControlState.normal)
-//        uploadImageButton.layer.borderColor = UIColor(rgb: 0xd1d1d1) as! CGColor
+        uploadImageButton.layer.borderColor = basicColor.cgColor
 //        uploadImageButton.addTarget(self, action: #selector(professionalNextButton), for: UIControlEvents.touchUpInside)
         uploadImageButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
         uploadImageButton.layer.cornerRadius = 5
@@ -419,7 +464,7 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         
         let professionalNext = UIButton()
         professionalNext.frame = CGRect(x: (view.frame.size.width/2) - 75, y: 435, width: 150, height: 40)
-        professionalNext.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        professionalNext.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         professionalNext.backgroundColor = UIColor(rgb: 0x009a3d)
         professionalNext.addTarget(self, action: #selector(professionalNextButton), for: UIControlEvents.touchUpInside)
         professionalNext.setTitle("Save and Next", for: .normal)

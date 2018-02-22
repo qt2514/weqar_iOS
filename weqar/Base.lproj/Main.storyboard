@@ -675,6 +675,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="Cf5-36-XpA"/>
                                                     <constraint firstAttribute="width" constant="25" id="Tg2-tt-bQi"/>
                                                 </constraints>
+                                                <color key="tintColor" red="0.0" green="0.60392156862745094" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="back"/>
                                                 <connections>
                                                     <action selector="clickBack:" destination="YJY-2z-WO1" eventType="touchUpInside" id="HpN-w5-COY"/>
@@ -778,7 +779,7 @@
                                                     <constraint firstAttribute="width" constant="25" id="0zv-WP-2VQ"/>
                                                     <constraint firstAttribute="height" constant="30" id="daj-43-uwJ"/>
                                                 </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.0" green="0.60392156862745094" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="back"/>
                                                 <connections>
                                                     <action selector="back:" destination="xKH-oP-1DF" eventType="touchUpInside" id="ao8-6K-Lcz"/>

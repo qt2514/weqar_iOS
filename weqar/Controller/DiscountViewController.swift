@@ -17,6 +17,8 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var searchTF: UITextField!
 
+    private let refreshControl = UIRefreshControl()
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
 //        searchView.layer.borderColor = anotherColor as! CGColor
         searchLeftConstraint.constant = -35
@@ -64,6 +66,7 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
         myCollectionView.showsHorizontalScrollIndicator = false
 
         self.view.addSubview(myCollectionView)
+        myCollectionView.addSubview(refreshControl)
         myCollectionView.translatesAutoresizingMaskIntoConstraints = false
         edgesForExtendedLayout = []
 
