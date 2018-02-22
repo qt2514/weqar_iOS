@@ -51,7 +51,7 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize(width: view.frame.size.width - 20, height:(view.frame.size.height / 4))
-        layout.sectionInset = UIEdgeInsets(top: 20, left:10, bottom: 00, right: 10)
+        layout.sectionInset = UIEdgeInsets(top: 10, left:10, bottom: 00, right: 10)
         layout.minimumLineSpacing = 10
 
         let myCollectionView:UICollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
