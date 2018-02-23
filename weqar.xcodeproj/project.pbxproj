@@ -175,7 +175,6 @@
 				03B709BC2028825F007C374A /* weqarUITests */,
 				2E846D46BA2E343D824ACFDD /* Pods */,
 				03B7099B2028825F007C374A /* Products */,
-				7DF8F5F9E7A3852CFFD1D2F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -243,9 +242,10 @@
 		2E846D46BA2E343D824ACFDD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				7DF8F5F9E7A3852CFFD1D2F6 /* Frameworks */,
 				21FBAC21B39B7327626E4221 /* Pods-weqar.debug.xcconfig */,
-				6A6B6BE4598A4CCB5788DB64 /* Pods-weqar.release.xcconfig */,
 				CC178A9D7E25227BAA50BF7D /* Pods-weqarTests.debug.xcconfig */,
+				6A6B6BE4598A4CCB5788DB64 /* Pods-weqar.release.xcconfig */,
 				986BD1C0210122CD620B51C9 /* Pods-weqarTests.release.xcconfig */,
 				608DD37CC93BF4F274083D0E /* Pods-weqarUITests.debug.xcconfig */,
 				B850F0415FFE6B7314BE2E47 /* Pods-weqarUITests.release.xcconfig */,
@@ -412,11 +412,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-weqar/Pods-weqar-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

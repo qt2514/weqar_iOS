@@ -17,7 +17,7 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var searchTF: UITextField!
 
-    private let refreshControl = UIRefreshControl()
+    var refreshControl: UIRefreshControl!
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
 //        searchView.layer.borderColor = anotherColor as! CGColor
@@ -48,6 +48,7 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
     override func viewDidLoad() {
         super.viewDidLoad()
         searchTF.delegate = self
+        searchView.layer.cornerRadius = 5
 //        searchView.layer.borderColor = UIColor(hex: "009a3d") as! CGColor
 
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -66,10 +67,17 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
         myCollectionView.showsHorizontalScrollIndicator = false
 
         self.view.addSubview(myCollectionView)
-        myCollectionView.addSubview(refreshControl)
         myCollectionView.translatesAutoresizingMaskIntoConstraints = false
         edgesForExtendedLayout = []
 
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        myCollectionView.addSubview(refreshControl)
+    }
+    
+    @objc func refresh(sender:AnyObject) {
+        refreshControl.endRefreshing()
     }
 
     override func didReceiveMemoryWarning() {

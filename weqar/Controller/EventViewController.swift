@@ -10,6 +10,7 @@ import UIKit
 
 class EventViewController: UIViewController,UITextFieldDelegate {
 
+//    @IBOutlet weak var searchTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchRightConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchLeftConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchView: UIView!
@@ -18,12 +19,14 @@ class EventViewController: UIViewController,UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         searchLeftConstraint.constant = -35
         searchRightConstraint.constant = -35
+//        searchTopConstraint.constant = -40
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if(searchTF.resignFirstResponder()) {
             searchLeftConstraint.constant = 8
             searchRightConstraint.constant = 8
+//            searchTopConstraint.constant = 0
         }
         return true
     }

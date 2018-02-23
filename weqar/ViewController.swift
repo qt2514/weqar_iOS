@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-    
+import PopupDialog
 
 class ViewController: UIViewController,UITextFieldDelegate {
     
@@ -39,6 +38,27 @@ class ViewController: UIViewController,UITextFieldDelegate {
         }
         
     }
+    func showPopup(animated: Bool = true , result  :String) {
+        
+        // Prepare the popup assets
+        
+        let title = ""
+        let message = "\(result)"
+        
+        // Create the dialog
+        let popup = PopupDialog(title: title, message: message) //(title: title, message: message, image: image, preferredWidth: 580)
+        
+        // Create second button
+        let buttonThree = DefaultButton(title: "Ok") { [weak self] in
+        }
+        
+        // Add buttons to dialog
+        popup.addButtons([buttonThree])
+        
+        // Present dialog
+        self.present(popup, animated: animated, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,6 +69,14 @@ class ViewController: UIViewController,UITextFieldDelegate {
     
 
     @objc func loginClicked(sender:UIButton!) {
+        
+//        self.showPopup(result: "You have successfully logged in")
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromRight
+        transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
+        view.window!.layer.add(transition, forKey: kCATransition)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         self.present(vc, animated: false, completion: nil)
