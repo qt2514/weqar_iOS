@@ -71,12 +71,13 @@ class ViewController: UIViewController,UITextFieldDelegate {
     @objc func loginClicked(sender:UIButton!) {
         
 //        self.showPopup(result: "You have successfully logged in")
-        let transition = CATransition()
-        transition.duration = 0.3
-        transition.type = kCATransitionPush
-        transition.subtype = kCATransitionFromRight
-        transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
-        view.window!.layer.add(transition, forKey: kCATransition)
+//        let transition = CATransition()
+//        transition.duration = 0.3
+//        transition.type = kCATransitionPush
+//        transition.subtype = kCATransitionFromRight
+//        transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
+//        view.window!.layer.add(transition, forKey: kCATransition)
+
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         self.present(vc, animated: false, completion: nil)

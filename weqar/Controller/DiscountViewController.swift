@@ -21,18 +21,18 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
 //        searchView.layer.borderColor = anotherColor as! CGColor
-        searchLeftConstraint.constant = -35
-        searchRightConstraint.constant = -35
+        searchLeftConstraint.constant = -27
+        searchRightConstraint.constant = -27
     }
 
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if(searchTF.resignFirstResponder()) {
-//            searchView.layer.borderColor = UIColor(red: 209.0/255.0, green: 209.0/255.0, blue: 209.0/255.0,alpha: 1.0) as! CGColor
             searchLeftConstraint.constant = 8
             searchRightConstraint.constant = 8
         }
         return true
     }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
