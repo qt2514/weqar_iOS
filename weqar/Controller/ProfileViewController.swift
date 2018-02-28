@@ -35,9 +35,6 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "packageCell", for: indexPath as IndexPath) as! PackageCollectionViewCell
         cell.priceLabel.text = rates[indexPath.row]
-        cell.layer.cornerRadius = 15
-        cell.backgroundColor = .white
-        cell.clipsToBounds = true
         return cell
     }
     

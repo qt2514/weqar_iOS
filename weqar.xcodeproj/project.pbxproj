@@ -10,6 +10,11 @@
 		030F04AA2035AEE3000553D6 /* DiscountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F04A92035AEE3000553D6 /* DiscountCollectionViewCell.swift */; };
 		031F2A7C202996B9008B1EA1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F2A7B202996B9008B1EA1 /* UIColor.swift */; };
 		031F2A862029E405008B1EA1 /* VideoSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F2A852029E405008B1EA1 /* VideoSplashViewController.swift */; };
+		032DEE4B2045B549000654DC /* DetailDiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DEE4A2045B549000654DC /* DetailDiscountViewController.swift */; };
+		032DEE4D20461E7C000654DC /* DetailDiscountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DEE4C20461E7A000654DC /* DetailDiscountCollectionViewCell.swift */; };
+		03392E062044A32600F4508A /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03392E052044A32500F4508A /* AccountSettingsViewController.swift */; };
+		03392E082044A34300F4508A /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03392E072044A34300F4508A /* ProfileSettingsViewController.swift */; };
+		03392E0B2044B19900F4508A /* JobsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03392E0A2044B19900F4508A /* JobsCollectionViewCell.swift */; };
 		033FCFE1203D9F9C001F4F1C /* PackageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033FCFE0203D9F9B001F4F1C /* PackageCollectionViewCell.swift */; };
 		035E34CE2034CD5000E0D952 /* DiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E34CD2034CD5000E0D952 /* DiscountViewController.swift */; };
 		035E34D02034DA5F00E0D952 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E34CF2034DA5F00E0D952 /* TabBarViewController.swift */; };
@@ -18,6 +23,7 @@
 		037310DA203B50B300ECD2A8 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037310D9203B50B300ECD2A8 /* JobsViewController.swift */; };
 		037310DC203B50CB00ECD2A8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037310DB203B50CB00ECD2A8 /* SettingsViewController.swift */; };
 		037310E6203C4E5B00ECD2A8 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037310E5203C4E5B00ECD2A8 /* FilterCollectionViewCell.swift */; };
+		03774FD12045AFCF0080A7EF /* DetailJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03774FD02045AFCF0080A7EF /* DetailJobsViewController.swift */; };
 		03B7099E2028825F007C374A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B7099D2028825F007C374A /* AppDelegate.swift */; };
 		03B709A02028825F007C374A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B7099F2028825F007C374A /* ViewController.swift */; };
 		03B709A32028825F007C374A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B709A12028825F007C374A /* Main.storyboard */; };
@@ -55,6 +61,11 @@
 		031F2A852029E405008B1EA1 /* VideoSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSplashViewController.swift; sourceTree = "<group>"; };
 		031F2A882029E8B0008B1EA1 /* SwiftyGif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyGif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		031F2A892029EC1A008B1EA1 /* splashVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = splashVideo.mp4; sourceTree = "<group>"; };
+		032DEE4A2045B549000654DC /* DetailDiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDiscountViewController.swift; sourceTree = "<group>"; };
+		032DEE4C20461E7A000654DC /* DetailDiscountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDiscountCollectionViewCell.swift; sourceTree = "<group>"; };
+		03392E052044A32500F4508A /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
+		03392E072044A34300F4508A /* ProfileSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewController.swift; sourceTree = "<group>"; };
+		03392E0A2044B19900F4508A /* JobsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsCollectionViewCell.swift; sourceTree = "<group>"; };
 		033FCFE0203D9F9B001F4F1C /* PackageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCollectionViewCell.swift; sourceTree = "<group>"; };
 		035E34CD2034CD5000E0D952 /* DiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewController.swift; sourceTree = "<group>"; };
 		035E34CF2034DA5F00E0D952 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +74,7 @@
 		037310D9203B50B300ECD2A8 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
 		037310DB203B50CB00ECD2A8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		037310E5203C4E5B00ECD2A8 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		03774FD02045AFCF0080A7EF /* DetailJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobsViewController.swift; sourceTree = "<group>"; };
 		03B7099A2028825F007C374A /* weqar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weqar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B7099D2028825F007C374A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03B7099F2028825F007C374A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,7 +92,7 @@
 		03F1E4982034452A003F5C3F /* weqar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = weqar.gif; sourceTree = "<group>"; };
 		10DF254FF29A357B0126F6CE /* Pods_weqar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weqar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21FBAC21B39B7327626E4221 /* Pods-weqar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weqar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weqar/Pods-weqar.debug.xcconfig"; sourceTree = "<group>"; };
-		608DD37CC93BF4F274083D0E /* Pods-weqarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weqarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weqarUITests/Pods-weqarUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		608DD37CC93BF4F274083D0E /* Pods-weqarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weqarUITests.debug.xcconfig"; path = "Pods/DynamicBlurView/Pods-weqarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A6B6BE4598A4CCB5788DB64 /* Pods-weqar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weqar.release.xcconfig"; path = "Pods/Target Support Files/Pods-weqar/Pods-weqar.release.xcconfig"; sourceTree = "<group>"; };
 		7871356A7196F7FDDC224160 /* Pods_weqarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weqarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		986BD1C0210122CD620B51C9 /* Pods-weqarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weqarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-weqarTests/Pods-weqarTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				030F04A92035AEE3000553D6 /* DiscountCollectionViewCell.swift */,
+				032DEE4C20461E7A000654DC /* DetailDiscountCollectionViewCell.swift */,
+				03392E0A2044B19900F4508A /* JobsCollectionViewCell.swift */,
 				033FCFE0203D9F9B001F4F1C /* PackageCollectionViewCell.swift */,
 				037310E5203C4E5B00ECD2A8 /* FilterCollectionViewCell.swift */,
 			);
@@ -231,8 +245,12 @@
 				03B709CE202886D9007C374A /* signUpViewController.swift */,
 				035E34CF2034DA5F00E0D952 /* TabBarViewController.swift */,
 				035E34CD2034CD5000E0D952 /* DiscountViewController.swift */,
+				03774FD02045AFCF0080A7EF /* DetailJobsViewController.swift */,
+				032DEE4A2045B549000654DC /* DetailDiscountViewController.swift */,
 				037310D9203B50B300ECD2A8 /* JobsViewController.swift */,
 				037310DB203B50CB00ECD2A8 /* SettingsViewController.swift */,
+				03392E052044A32500F4508A /* AccountSettingsViewController.swift */,
+				03392E072044A34300F4508A /* ProfileSettingsViewController.swift */,
 				037310D7203B509F00ECD2A8 /* EventViewController.swift */,
 				037310D5203B123400ECD2A8 /* ProfileViewController.swift */,
 			);
@@ -565,13 +583,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				035E34CE2034CD5000E0D952 /* DiscountViewController.swift in Sources */,
+				03774FD12045AFCF0080A7EF /* DetailJobsViewController.swift in Sources */,
 				03B709A02028825F007C374A /* ViewController.swift in Sources */,
+				03392E062044A32600F4508A /* AccountSettingsViewController.swift in Sources */,
+				032DEE4D20461E7C000654DC /* DetailDiscountCollectionViewCell.swift in Sources */,
 				031F2A7C202996B9008B1EA1 /* UIColor.swift in Sources */,
 				03B7099E2028825F007C374A /* AppDelegate.swift in Sources */,
 				035E34D02034DA5F00E0D952 /* TabBarViewController.swift in Sources */,
+				032DEE4B2045B549000654DC /* DetailDiscountViewController.swift in Sources */,
 				037310D8203B509F00ECD2A8 /* EventViewController.swift in Sources */,
+				03392E082044A34300F4508A /* ProfileSettingsViewController.swift in Sources */,
 				031F2A862029E405008B1EA1 /* VideoSplashViewController.swift in Sources */,
 				033FCFE1203D9F9C001F4F1C /* PackageCollectionViewCell.swift in Sources */,
+				03392E0B2044B19900F4508A /* JobsCollectionViewCell.swift in Sources */,
 				037310D6203B123400ECD2A8 /* ProfileViewController.swift in Sources */,
 				030F04AA2035AEE3000553D6 /* DiscountCollectionViewCell.swift in Sources */,
 				037310DA203B50B300ECD2A8 /* JobsViewController.swift in Sources */,

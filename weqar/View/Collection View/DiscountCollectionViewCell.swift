@@ -54,15 +54,16 @@ class DiscountCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-//        contentView.layer.cornerRadius = 100
-//        cellView.frame = CGRect(x: 2, y: 0, width: contentView.frame.size.width - 4, height: contentView.frame.size.height)
-//        contentView.backgroundColor = .yellow
-//        contentView.addSubview(cellView)
+        cellView.frame = CGRect(x: 0, y: 0, width: contentView.frame.size.width, height: contentView.frame.size.height)
+        cellView.layer.cornerRadius = 10
+        cellView.clipsToBounds = true
+        contentView.addSubview(cellView)
 
-        banner.frame = CGRect(x: 0, y: 0, width: contentView.frame.size.width, height: contentView.frame.size.height)
+        banner.frame = CGRect(x: 0, y: 0, width: cellView.frame.size.width, height: cellView.frame.size.height)
         banner.image = UIImage(named:"banner")
         banner.contentMode = .scaleToFill
-        contentView.addSubview(banner)
+        banner.clipsToBounds = true
+        cellView.addSubview(banner)
 
         card.frame = CGRect(x: 0, y: 0, width: ((banner.frame.size.width) * 0.60), height: banner.frame.size.height)
         card.image = UIImage(named:"greycard")
@@ -92,6 +93,7 @@ class DiscountCollectionViewCell: UICollectionViewCell {
         logo.layer.cornerRadius = ((self.frame.size.width) * 0.10)
         logo.image = UIImage(named:"logo")
         logo.layer.borderWidth = 2
+        logo.clipsToBounds = true
         logo.layer.borderColor = anotherColor.cgColor
         card.addSubview(logo)
 

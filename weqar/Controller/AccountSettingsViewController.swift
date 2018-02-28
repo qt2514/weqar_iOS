@@ -1,18 +1,21 @@
 //
-//  EventViewController.swift
+//  AccountSettingsViewController.swift
 //  weqar
 //
-//  Created by veena on 2/20/18.
+//  Created by veena on 2/27/18.
 //  Copyright © 2018 Quaticstech. All rights reserved.
 //
 
 import UIKit
 
-class EventViewController: UIViewController {
- 
+class AccountSettingsViewController: UIViewController {
+    @IBAction func clickBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
 

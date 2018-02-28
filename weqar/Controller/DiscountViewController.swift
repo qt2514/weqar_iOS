@@ -40,10 +40,13 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "discountCell", for: indexPath as IndexPath) as! DiscountCollectionViewCell
-//        cell.layer.cornerRadius = 25
         return cell
     }
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DetailDiscountViewController") as! DetailDiscountViewController
+        self.present(vc, animated: false, completion: nil)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

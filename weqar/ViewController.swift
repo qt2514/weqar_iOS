@@ -24,7 +24,7 @@ class ViewController: UIViewController,UITextFieldDelegate {
    @objc func textFieldDidBeginEditing(_ textField: UITextField) {
         
         if (textField.tag == 1) {
-            gmailView.layer.borderColor = appColor.cgColor
+            gmailView.layer.borderColor = UIColor(rgb: 0x009a3d).cgColor
             passwordView.layer.borderColor = myColor.cgColor
             
         }else if (textField.tag == 2) {
