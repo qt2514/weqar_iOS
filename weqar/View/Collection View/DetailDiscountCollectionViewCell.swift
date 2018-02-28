@@ -17,23 +17,38 @@ class DetailDiscountCollectionViewCell: UICollectionViewCell {
         var img = UIImageView()
         return img
     }()
-    var durationLabel: UILabel = {
+    var banner: UIImageView = {
+        var img = UIImageView()
+        return img
+    }()
+    var profileImage: UIImageView = {
+        var img = UIImageView()
+        return img
+    }()
+    var offer: UILabel = {
         var lab = UILabel()
         return lab
     }()
-    var priceLabel: UILabel = {
+    var period: UILabel = {
         var lab = UILabel()
         return lab
+    }()
+    var star: UIImageView = {
+        var img = UIImageView()
+        return img
     }()
     var contentLabel: UILabel = {
         var lab = UILabel()
         return lab
     }()
-    var planButton: UIButton = {
+    var applyButton: UIButton = {
         var but = UIButton()
         return but
     }()
-    
+    var followButton: UIButton = {
+        var but = UIButton()
+        return but
+    }()
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -43,20 +58,39 @@ class DetailDiscountCollectionViewCell: UICollectionViewCell {
         cellView.clipsToBounds = true
         contentView.addSubview(cellView)
         
-        durationLabel.frame = CGRect(x:(self.frame.size.width/2)-50, y: 10, width: 100, height: 30)
-        durationLabel.font = UIFont.boldSystemFont(ofSize: 18.0)
-        durationLabel.textAlignment = .center
-        durationLabel.text = "MONTHLY"
-        cellView.addSubview(durationLabel)
+        banner.frame = CGRect(x: 5, y: 5, width: cellView.frame.size.width - 10, height: (cellView.frame.size.height * 0.55))
+        banner.image = UIImage(named:"background")
+        banner.clipsToBounds = true
+        cellView.addSubview(banner)
         
-        priceLabel.frame = CGRect(x:(self.frame.size.width/2)-50, y: 40, width: 100, height: 40)
-        priceLabel.font = UIFont.boldSystemFont(ofSize: 24.0)
-        priceLabel.adjustsFontSizeToFitWidth = true
-        priceLabel.textAlignment = .center
-        priceLabel.textColor = UIColor(rgb: 0x009a3d)
-        cellView.addSubview(priceLabel)
+        profileImage.frame = CGRect(x: 10, y:(cellView.frame.size.height * 0.55) - ((cellView.frame.size.width/5) + 5), width: (contentView.frame.size.width/5), height: (contentView.frame.size.width/5))
+        profileImage.layer.cornerRadius = (contentView.frame.size.width/10)
+        profileImage.image = UIImage(named:"banner")
+        profileImage.layer.borderColor = UIColor(rgb: 0x009a3d).cgColor
+        profileImage.layer.borderWidth = 2
+        profileImage.clipsToBounds = true
+        cellView.addSubview(profileImage)
+
+        offer.frame = CGRect(x:(cellView.frame.size.width/5) + 20, y: (cellView.frame.size.height * 0.55) - ((cellView.frame.size.width/5) + 10), width: (cellView.frame.size.width) - ((cellView.frame.size.width/5) + 30), height: 30)
+        offer.font = UIFont.boldSystemFont(ofSize: 18.0)
+        offer.textAlignment = .left
+        offer.text = "75% Discount on KFC"
+        offer.textColor = .white
+        cellView.addSubview(offer)
+
+        period.frame = CGRect(x:(cellView.frame.size.width/5) + 20, y: (cellView.frame.size.height * 0.55) - ((cellView.frame.size.width/5) + 10) + 23, width: (cellView.frame.size.width) - ((cellView.frame.size.width/5) + 30), height: 25)
+        period.font = UIFont.boldSystemFont(ofSize: 16.0)
+        period.adjustsFontSizeToFitWidth = true
+        period.textAlignment = .left
+        period.text = "Period April 07, 2017 Don't miss it!"
+        period.textColor = .white
+        cellView.addSubview(period)
         
-        contentLabel.frame = CGRect(x:10, y: 80 , width: ((self.frame.size.width) - 20) , height: self.frame.size.height - 140)
+        star.frame = CGRect(x: (cellView.frame.size.width/5) + 20, y: (cellView.frame.size.height * 0.55) - ((cellView.frame.size.width/5) + 10) + 47, width: 80, height: 15)
+        star.image = UIImage(named:"star")
+        cellView.addSubview(star)
+
+        contentLabel.frame = CGRect(x:10, y: (cellView.frame.size.height * 0.55) + 10 , width: ((cellView.frame.size.width) - 20), height: cellView.frame.size.height - ((cellView.frame.size.height * 0.55) + 70))
         contentLabel.font = UIFont.systemFont(ofSize: 14)
         //        contentLabel.textContent.textAlignment = NSTextAlignment.Left
         contentLabel.numberOfLines = 20
@@ -64,17 +98,23 @@ class DetailDiscountCollectionViewCell: UICollectionViewCell {
         contentLabel.text = "If this is your first Subscription Plan it will be considered the Main Subscription Plan (Parent Subscription Plan). All other Subscription Plans that you will create will be Upgrades or Downgrades of this Main Plan (Parent Subscription Plan). If this is your first Subscription Plan it will be considered the Main Subscription Plan (Parent Subscription Plan). All other Subscription Plans that you will create will be Upgrades or Downgrades of this Main Plan (Parent Subscription Plan)If this is your first Subscription Plan it will be considered the Main Subscription Plan (Parent Subscription Plan). All other Subscription Plans that you will create will be Upgrades or Downgrades of this Main Plan (Parent Subscription Plan). If this is your first Subscription Plan it will be considered the Main Subscription Plan (Parent Subscription Plan). All other Subscription Plans that you will create will be Upgrades or Downgrades of this Main Plan (Parent Subscription Plan)"
         cellView.addSubview(contentLabel)
         
-        planButton.frame = CGRect(x: (self.frame.size.width/2)-60, y: self.frame.size.height - 50, width: 120, height: 40)
-        planButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
-        planButton.setTitle("CHOOSE PLAN", for: .normal)
-        planButton.setTitleColor(UIColor(rgb: 0x009a3d), for: .normal)
-        planButton.titleLabel?.textAlignment = .center
-        planButton.layer.cornerRadius = 15
-        planButton.layer.borderColor = UIColor(rgb: 0x009a3d).cgColor
-        planButton.layer.borderWidth = 1
-        cellView.addSubview(planButton)
+        applyButton.frame = CGRect(x: (cellView.frame.size.width * 0.05) , y: cellView.frame.size.height - 50, width: (cellView.frame.size.width * 0.40), height: 40)
+        applyButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        applyButton.setTitle("APPLY", for: .normal)
+        applyButton.setTitleColor(.white, for: .normal)
+        applyButton.titleLabel?.textAlignment = .center
+        applyButton.layer.cornerRadius = 15
+        applyButton.backgroundColor = UIColor(rgb: 0x009a3d)
+        cellView.addSubview(applyButton)
         
-        
+        followButton.frame = CGRect(x: (cellView.frame.size.width * 0.55), y: cellView.frame.size.height - 50, width: (cellView.frame.size.width * 0.40), height: 40)
+        followButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        followButton.setTitle("FOLLOW", for: .normal)
+        followButton.setTitleColor(.white, for: .normal)
+        followButton.titleLabel?.textAlignment = .center
+        followButton.layer.cornerRadius = 15
+        followButton.backgroundColor = UIColor(rgb: 0xd1d1d1)
+        cellView.addSubview(followButton)
     }
     
     required init?(coder aDecoder: NSCoder) {

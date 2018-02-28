@@ -72,7 +72,7 @@ class PackageCollectionViewCell: UICollectionViewCell {
         planButton.titleLabel?.textAlignment = .center
         planButton.layer.cornerRadius = 15
         planButton.layer.borderColor = UIColor(rgb: 0x009a3d).cgColor
-        planButton.layer.borderWidth = 1
+        planButton.layer.borderWidth = 2
         cellView.addSubview(planButton)
 
 

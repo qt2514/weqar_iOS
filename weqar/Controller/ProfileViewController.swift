@@ -9,7 +9,7 @@
 import UIKit
 import DropDown
 
-class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
+class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     let dropDown = DropDown()
     var anotherColor = UIColor(red: 0.0/255.0, green: 154.0/255.0, blue: 61.0/255.0, alpha: 1.0)
@@ -453,10 +453,10 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         uploadImageButton.titleLabel?.textAlignment = .center
         uploadImageButton.setTitleColor(UIColor(rgb: 0xd1d1d1), for: UIControlState.normal)
         uploadImageButton.layer.borderColor = basicColor.cgColor
-//        uploadImageButton.addTarget(self, action: #selector(professionalNextButton), for: UIControlEvents.touchUpInside)
+        uploadImageButton.addTarget(self, action: #selector(uploadImage), for: UIControlEvents.touchUpInside)
         uploadImageButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
         uploadImageButton.layer.cornerRadius = 5
-        uploadImageButton.layer.borderWidth = 1 
+        uploadImageButton.layer.borderWidth = 2
         professionalScrollView.addSubview(uploadImageButton)
         
         let professionalNext = UIButton()
@@ -469,6 +469,16 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         professionalNext.layer.cornerRadius = 5
         professionalScrollView.addSubview(professionalNext)
   }
+     @objc func uploadImage(sender:UIButton!) {
+        print("ASJHDGVLSDJCG")
+//        var imagePickerController = UIImagePickerController()
+//        imagePickerController.delegate = self
+//        imagePickerController.sourceType = UIImagePickerControllerSourceType.savedPhotosAlbum
+//        imagePickerController.allowsEditing = true
+//        self.presentViewController(imagePickerController, animated: true, completion: { imageP in
+//
+//        })
+    }
     @objc func professionalNextButton(sender:UIButton!) {
         var viewOne = UIView()
         viewOne.frame = CGRect(x: 0, y: 90 + (view.frame.size.width/6), width: (view.frame.size.width/4), height: 02)

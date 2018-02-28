@@ -56,21 +56,23 @@ class JobsCollectionViewCell: UICollectionViewCell {
         cellView.clipsToBounds = true
         contentView.addSubview(cellView)
         
-        logo.frame = CGRect(x: 20, y:((cellView.frame.size.height/2) - ((self.frame.size.width) * 0.125)), width: ((self.frame.size.width) * 0.25), height: ((self.frame.size.width) * 0.25))
-        logo.layer.cornerRadius = ((self.frame.size.width) * 0.125)
+        logo.frame = CGRect(x: 20, y:((cellView.frame.size.height/2) - ((self.frame.size.width) * 0.10)), width: ((self.frame.size.width) * 0.20), height: ((self.frame.size.width) * 0.20))
+        logo.layer.cornerRadius = ((self.frame.size.width) * 0.10)
         logo.image = UIImage(named:"logo")
+        logo.layer.borderColor = UIColor(rgb: 0x009a3d).cgColor
+        logo.layer.borderWidth = 2
         logo.contentMode = .scaleToFill
         logo.clipsToBounds = true
         cellView.addSubview(logo)
         
         job.frame = CGRect(x:((self.frame.size.width) * 0.25) + 30, y:0, width: 150, height: 30)
-        job.font = UIFont.boldSystemFont(ofSize: 18.0)
+        job.font = UIFont.boldSystemFont(ofSize: 20.0)
         job.textAlignment = .left
         job.text = "Film Maker"
         cellView.addSubview(job)
         
         role.frame = CGRect(x:((self.frame.size.width) * 0.25) + 30, y: 25 , width: 150 , height: 20)
-        role.font = UIFont.boldSystemFont(ofSize: 14.0)
+        role.font = UIFont.boldSystemFont(ofSize: 16.0)
         role.textAlignment = .left
         role.text = "Producer"
         cellView.addSubview(role)
