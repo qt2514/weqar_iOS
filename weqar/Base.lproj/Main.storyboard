@@ -1579,9 +1579,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" highlightedImage="location" translatesAutoresizingMaskIntoConstraints="NO" id="rIP-eq-iD1">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locationcolor" translatesAutoresizingMaskIntoConstraints="NO" id="rIP-eq-iD1">
                                         <rect key="frame" x="110" y="80" width="20" height="20"/>
-                                        <color key="backgroundColor" red="0.81960784310000001" green="0.81960784310000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="nkV-b7-oVh"/>
                                             <constraint firstAttribute="width" constant="20" id="wNh-oL-a3E"/>
@@ -1589,7 +1588,6 @@
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="p0s-JG-DMC">
                                         <rect key="frame" x="110" y="100" width="20" height="20"/>
-                                        <color key="backgroundColor" red="0.81960784310000001" green="0.81960784310000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Cge-1l-WXM"/>
                                             <constraint firstAttribute="width" constant="20" id="x9s-B0-P5P"/>
@@ -1654,10 +1652,10 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5f-k3-DAK">
                                         <rect key="frame" x="0.0" y="8" width="359" height="383"/>
-                                        <mutableString key="text">Maybe this time around your view hierarchy didn’t have to change at runtime, but you still had to figure out how to squeeze this one new view into your storyboard. What approach do you take? Do you add outlets to constraints in your storyboard so that you can activate or deactivate certain ones? Or do you use a third party library? Or depending on the complexity maybe you do everything in code.
+                                        <string key="text">Maybe this time around your view hierarchy didn’t have to change at runtime, but you still had to figure out how to squeeze this one new view into your storyboard. What approach do you take? Do you add outlets to constraints in your storyboard so that you can activate or deactivate certain ones? Or do you use a third party library? Or depending on the complexity maybe you do everything in code.
 Maybe this time around your view hierarchy didn’t have to change at runtime, but you still had to figure out how to squeeze this one new view into your storyboard. What approach do you take? Do you add outlets to constraints in your storyboard so that you can activate or deactivate certain ones? Or do you use a third party library? Or depending on the complexity maybe you do everything in code.
 Maybe this time around your view hierarchy didn’t have to change at runtime, but you still had to figure out how to squeeze this one new view into your storyboard. What approach do you take? Do you add outlets to constraints in your storyboard so that you can activate or deactivate certain ones? Or do you use a third party library? Or depending on the complexity maybe you do everything in code.
-</mutableString>
+</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1822,11 +1820,11 @@ Maybe this time around your view hierarchy didn’t have to change at runtime, b
         <image name="help" width="32" height="32"/>
         <image name="iconName" width="203" height="102"/>
         <image name="jobs" width="32" height="32"/>
-        <image name="location" width="7" height="10"/>
+        <image name="locationcolor" width="20" height="20"/>
         <image name="message" width="32" height="32"/>
         <image name="notification" width="32" height="32"/>
         <image name="profile" width="32" height="32"/>
         <image name="settings" width="32" height="32"/>
-        <image name="time" width="25" height="25"/>
+        <image name="time" width="20" height="20"/>
     </resources>
 </document>

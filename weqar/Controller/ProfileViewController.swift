@@ -15,6 +15,9 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
     var anotherColor = UIColor(red: 0.0/255.0, green: 154.0/255.0, blue: 61.0/255.0, alpha: 1.0)
     var basicColor = UIColor(red: 209.0/255.0, green: 209.0/255.0, blue: 209.0/255.0,alpha: 1.0)
 
+    var imagePicker = UIImagePickerController()
+    var uploadImageView = UIImageView()
+    
     var rates = ["₹ 100","₹ 200","₹ 300","₹ 400","₹ 500"]
     
     var firstNameView = UIView()
@@ -27,6 +30,15 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
     var CIDnoView = UIView()
     var memberNoTF = UIView()
     var validView = UIView()
+   
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            uploadImageView.contentMode = .scaleAspectFit
+            uploadImageView.image = UIImage(named:"pickedImage")
+        }
+        
+        dismiss(animated:true, completion: nil)
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
@@ -41,9 +53,8 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    
-        func textFieldDidBeginEditing(_ textField: UITextField) {
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
             self.resetColor()
             if (textField.tag == 1) {
                 print("ajksdgfkjhvf")
@@ -103,12 +114,12 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
             }
     
         }
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             self.resetColor()
             return true
         }
     
-        func resetColor() {
+    func resetColor() {
             self.firstNameView.backgroundColor = UIColor(rgb: 0xd1d1d1)
             self.lastNameView.backgroundColor = UIColor(rgb: 0xd1d1d1)
             self.lastNameView.backgroundColor = UIColor(rgb: 0xd1d1d1)
@@ -446,20 +457,19 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         uploadImageLabel.text = "Upload Image"
         uploadImageLabel.font = UIFont.boldSystemFont(ofSize: 16)
         professionalScrollView.addSubview(uploadImageLabel)
+       
+        var uploadImageView = UIImageView()
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        uploadImageView.addGestureRecognizer(tapGestureRecognizer)
+        uploadImageView.isUserInteractionEnabled = true
+        uploadImageView.frame = CGRect(x: 70, y: 285, width: 75, height: 100)
+        uploadImageView.layer.borderColor = basicColor.cgColor
+        uploadImageView.image = UIImage(named:"banner")
+        uploadImageView.layer.cornerRadius = 5
+        uploadImageView.layer.borderWidth = 2
+        professionalScrollView.addSubview(uploadImageView)
         
-        let uploadImageButton = UIButton()
-        uploadImageButton.frame = CGRect(x: 70, y: 285, width: 75, height: 100)
-        uploadImageButton.setTitle("+", for: .normal)
-        uploadImageButton.titleLabel?.textAlignment = .center
-        uploadImageButton.setTitleColor(UIColor(rgb: 0xd1d1d1), for: UIControlState.normal)
-        uploadImageButton.layer.borderColor = basicColor.cgColor
-        uploadImageButton.addTarget(self, action: #selector(uploadImage), for: UIControlEvents.touchUpInside)
-        uploadImageButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
-        uploadImageButton.layer.cornerRadius = 5
-        uploadImageButton.layer.borderWidth = 2
-        professionalScrollView.addSubview(uploadImageButton)
-        
-        let professionalNext = UIButton()
+        var professionalNext = UIButton()
         professionalNext.frame = CGRect(x: (view.frame.size.width/2) - 75, y: 435, width: 150, height: 40)
         professionalNext.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         professionalNext.backgroundColor = UIColor(rgb: 0x009a3d)
@@ -469,16 +479,18 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         professionalNext.layer.cornerRadius = 5
         professionalScrollView.addSubview(professionalNext)
   }
-     @objc func uploadImage(sender:UIButton!) {
-        print("ASJHDGVLSDJCG")
-//        var imagePickerController = UIImagePickerController()
-//        imagePickerController.delegate = self
-//        imagePickerController.sourceType = UIImagePickerControllerSourceType.savedPhotosAlbum
-//        imagePickerController.allowsEditing = true
-//        self.presentViewController(imagePickerController, animated: true, completion: { imageP in
-//
-//        })
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum;
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
     }
+}
     @objc func professionalNextButton(sender:UIButton!) {
         var viewOne = UIView()
         viewOne.frame = CGRect(x: 0, y: 90 + (view.frame.size.width/6), width: (view.frame.size.width/4), height: 02)
