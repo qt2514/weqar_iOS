@@ -24,6 +24,11 @@
 		037310DC203B50CB00ECD2A8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037310DB203B50CB00ECD2A8 /* SettingsViewController.swift */; };
 		037310E6203C4E5B00ECD2A8 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037310E5203C4E5B00ECD2A8 /* FilterCollectionViewCell.swift */; };
 		03774FD12045AFCF0080A7EF /* DetailJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03774FD02045AFCF0080A7EF /* DetailJobsViewController.swift */; };
+		03A992A1204813E400148303 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A992A0204813E400148303 /* BaseViewController.swift */; };
+		03A992A920482E9F00148303 /* ContentLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A992A820482E9F00148303 /* ContentLoadingView.xib */; };
+		03A992AB20482EA200148303 /* UIContentLoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A992AA20482EA200148303 /* UIContentLoadingIndicatorView.swift */; };
+		03A992B1204861E400148303 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A992B0204861E400148303 /* String.swift */; };
+		03A992B3204861E700148303 /* String+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A992B2204861E700148303 /* String+Convenience.swift */; };
 		03B7099E2028825F007C374A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B7099D2028825F007C374A /* AppDelegate.swift */; };
 		03B709A02028825F007C374A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B7099F2028825F007C374A /* ViewController.swift */; };
 		03B709A32028825F007C374A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B709A12028825F007C374A /* Main.storyboard */; };
@@ -35,7 +40,10 @@
 		03F1E4992034452B003F5C3F /* weqar.gif in Resources */ = {isa = PBXBuildFile; fileRef = 03F1E4982034452A003F5C3F /* weqar.gif */; };
 		1264982C75CF35DA5CD02FC6 /* Pods_weqarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7871356A7196F7FDDC224160 /* Pods_weqarUITests.framework */; };
 		14D4D7D1992DED9556995260 /* Pods_weqar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10DF254FF29A357B0126F6CE /* Pods_weqar.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		4B0EADB0D9AA699FAAF23BFA /* Pods_weqarUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C024B03EE25D6373903897E /* Pods_weqarUITests.framework */; };
+		77014C73739D453CBE2A6BDE /* Pods_weqarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6D1DB708E69B58091F834A /* Pods_weqarTests.framework */; };
 		81F6CA88F73564E42095D278 /* Pods_weqarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA878923077429334B8E859 /* Pods_weqarTests.framework */; };
+		D03B79B4E25EBC77C91CF725 /* Pods_weqar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8971D9BB9A422157CC0F1459 /* Pods_weqar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +83,11 @@
 		037310DB203B50CB00ECD2A8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		037310E5203C4E5B00ECD2A8 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		03774FD02045AFCF0080A7EF /* DetailJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobsViewController.swift; sourceTree = "<group>"; };
+		03A992A0204813E400148303 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		03A992A820482E9F00148303 /* ContentLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentLoadingView.xib; sourceTree = "<group>"; };
+		03A992AA20482EA200148303 /* UIContentLoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIContentLoadingIndicatorView.swift; sourceTree = "<group>"; };
+		03A992B0204861E400148303 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		03A992B2204861E700148303 /* String+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Convenience.swift"; sourceTree = "<group>"; };
 		03B7099A2028825F007C374A /* weqar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weqar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B7099D2028825F007C374A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03B7099F2028825F007C374A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,8 +107,12 @@
 		21FBAC21B39B7327626E4221 /* Pods-weqar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weqar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weqar/Pods-weqar.debug.xcconfig"; sourceTree = "<group>"; };
 		608DD37CC93BF4F274083D0E /* Pods-weqarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weqarUITests.debug.xcconfig"; path = "Pods/DynamicBlurView/Pods-weqarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A6B6BE4598A4CCB5788DB64 /* Pods-weqar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weqar.release.xcconfig"; path = "Pods/Target Support Files/Pods-weqar/Pods-weqar.release.xcconfig"; sourceTree = "<group>"; };
+		6F6D1DB708E69B58091F834A /* Pods_weqarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weqarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7871356A7196F7FDDC224160 /* Pods_weqarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weqarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8971D9BB9A422157CC0F1459 /* Pods_weqar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weqar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C024B03EE25D6373903897E /* Pods_weqarUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weqarUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		986BD1C0210122CD620B51C9 /* Pods-weqarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weqarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-weqarTests/Pods-weqarTests.release.xcconfig"; sourceTree = "<group>"; };
+		A0B2293AE16E3FAD4284B92A /* Pods-weqarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weqarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weqarUITests/Pods-weqarUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B850F0415FFE6B7314BE2E47 /* Pods-weqarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weqarUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-weqarUITests/Pods-weqarUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CC178A9D7E25227BAA50BF7D /* Pods-weqarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weqarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-weqarTests/Pods-weqarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DEA878923077429334B8E859 /* Pods_weqarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_weqarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14D4D7D1992DED9556995260 /* Pods_weqar.framework in Frameworks */,
+				D03B79B4E25EBC77C91CF725 /* Pods_weqar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81F6CA88F73564E42095D278 /* Pods_weqarTests.framework in Frameworks */,
+				77014C73739D453CBE2A6BDE /* Pods_weqarTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1264982C75CF35DA5CD02FC6 /* Pods_weqarUITests.framework in Frameworks */,
+				4B0EADB0D9AA699FAAF23BFA /* Pods_weqarUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				030F04A82035AEB8000553D6 /* Collection View */,
+				03A992A420482DE000148303 /* OtherView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,6 +173,7 @@
 		031F2A7920299661008B1EA1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				03A992AF204861D400148303 /* String */,
 				031F2A7A202996A3008B1EA1 /* Color */,
 			);
 			path = Extension;
@@ -181,6 +203,32 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		03A992A420482DE000148303 /* OtherView */ = {
+			isa = PBXGroup;
+			children = (
+				03A992A520482E6200148303 /* ActivityView */,
+			);
+			path = OtherView;
+			sourceTree = "<group>";
+		};
+		03A992A520482E6200148303 /* ActivityView */ = {
+			isa = PBXGroup;
+			children = (
+				03A992A820482E9F00148303 /* ContentLoadingView.xib */,
+				03A992AA20482EA200148303 /* UIContentLoadingIndicatorView.swift */,
+			);
+			path = ActivityView;
+			sourceTree = "<group>";
+		};
+		03A992AF204861D400148303 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				03A992B2204861E700148303 /* String+Convenience.swift */,
+				03A992B0204861E400148303 /* String.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
 		03B709912028825F007C374A = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +237,7 @@
 				03B709BC2028825F007C374A /* weqarUITests */,
 				2E846D46BA2E343D824ACFDD /* Pods */,
 				03B7099B2028825F007C374A /* Products */,
+				E8D3A737C5BE0A762912F615 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -206,14 +255,15 @@
 			isa = PBXGroup;
 			children = (
 				031F2A892029EC1A008B1EA1 /* splashVideo.mp4 */,
+				03A992A0204813E400148303 /* BaseViewController.swift */,
 				03F1E4982034452A003F5C3F /* weqar.gif */,
-				031F2A7920299661008B1EA1 /* Extension */,
 				03B709CB202882DD007C374A /* Controller */,
+				031F2A7920299661008B1EA1 /* Extension */,
 				031F2A832029E3D5008B1EA1 /* Others */,
 				030F04A72035AEAF000553D6 /* View */,
 				03B7099D2028825F007C374A /* AppDelegate.swift */,
-				03B7099F2028825F007C374A /* ViewController.swift */,
 				03B709A12028825F007C374A /* Main.storyboard */,
+				03B7099F2028825F007C374A /* ViewController.swift */,
 				03B709A42028825F007C374A /* Assets.xcassets */,
 				03B709A62028825F007C374A /* LaunchScreen.storyboard */,
 				03B709A92028825F007C374A /* Info.plist */,
@@ -267,6 +317,7 @@
 				986BD1C0210122CD620B51C9 /* Pods-weqarTests.release.xcconfig */,
 				608DD37CC93BF4F274083D0E /* Pods-weqarUITests.debug.xcconfig */,
 				B850F0415FFE6B7314BE2E47 /* Pods-weqarUITests.release.xcconfig */,
+				A0B2293AE16E3FAD4284B92A /* Pods-weqarUITests.debug.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -278,6 +329,16 @@
 				10DF254FF29A357B0126F6CE /* Pods_weqar.framework */,
 				DEA878923077429334B8E859 /* Pods_weqarTests.framework */,
 				7871356A7196F7FDDC224160 /* Pods_weqarUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8D3A737C5BE0A762912F615 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8971D9BB9A422157CC0F1459 /* Pods_weqar.framework */,
+				6F6D1DB708E69B58091F834A /* Pods_weqarTests.framework */,
+				8C024B03EE25D6373903897E /* Pods_weqarUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -399,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03B709A82028825F007C374A /* LaunchScreen.storyboard in Resources */,
+				03A992A920482E9F00148303 /* ContentLoadingView.xib in Resources */,
 				03F1E4992034452B003F5C3F /* weqar.gif in Resources */,
 				03B709A52028825F007C374A /* Assets.xcassets in Resources */,
 				03B709A32028825F007C374A /* Main.storyboard in Resources */,
@@ -429,15 +491,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-weqar/Pods-weqar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ARSLineProgress/ARSLineProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/FCAlertView/FCAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARSLineProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FCAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
 			);
@@ -584,9 +652,12 @@
 			files = (
 				035E34CE2034CD5000E0D952 /* DiscountViewController.swift in Sources */,
 				03774FD12045AFCF0080A7EF /* DetailJobsViewController.swift in Sources */,
+				03A992B3204861E700148303 /* String+Convenience.swift in Sources */,
+				03A992B1204861E400148303 /* String.swift in Sources */,
 				03B709A02028825F007C374A /* ViewController.swift in Sources */,
 				03392E062044A32600F4508A /* AccountSettingsViewController.swift in Sources */,
 				032DEE4D20461E7C000654DC /* DetailDiscountCollectionViewCell.swift in Sources */,
+				03A992A1204813E400148303 /* BaseViewController.swift in Sources */,
 				031F2A7C202996B9008B1EA1 /* UIColor.swift in Sources */,
 				03B7099E2028825F007C374A /* AppDelegate.swift in Sources */,
 				035E34D02034DA5F00E0D952 /* TabBarViewController.swift in Sources */,
@@ -594,6 +665,7 @@
 				037310D8203B509F00ECD2A8 /* EventViewController.swift in Sources */,
 				03392E082044A34300F4508A /* ProfileSettingsViewController.swift in Sources */,
 				031F2A862029E405008B1EA1 /* VideoSplashViewController.swift in Sources */,
+				03A992AB20482EA200148303 /* UIContentLoadingIndicatorView.swift in Sources */,
 				033FCFE1203D9F9C001F4F1C /* PackageCollectionViewCell.swift in Sources */,
 				03392E0B2044B19900F4508A /* JobsCollectionViewCell.swift in Sources */,
 				037310D6203B123400ECD2A8 /* ProfileViewController.swift in Sources */,
@@ -833,7 +905,7 @@
 		};
 		03B709C92028825F007C374A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 608DD37CC93BF4F274083D0E /* Pods-weqarUITests.debug.xcconfig */;
+			baseConfigurationReference = A0B2293AE16E3FAD4284B92A /* Pods-weqarUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

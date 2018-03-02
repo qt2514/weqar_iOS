@@ -9,36 +9,52 @@
 import UIKit
 import PopupDialog
 
-class ViewController: UIViewController,UITextFieldDelegate {
+enum LoginError: Error
+{
+    case nameEmpty
+    case passwordEmpty
+    case passwordLength
+    case emailError
+    case confirmPasswordError
+    case mobileError
+    case passwordMissMatched
+    case emailEmpty
+}
+
+class ViewController: BaseViewController,UITextFieldDelegate {
+    
+    @IBOutlet weak var usernameView: UIView!
+    @IBOutlet weak var passwordView: UIView!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var forgotButton: UIButton!
+    @IBOutlet weak var guestButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     
     var navigation : UINavigationController!
     
     let myColor : UIColor = UIColor(rgb: 0xd1d1d1)
     let appColor : UIColor = UIColor(rgb: 0x009a3d)
-    var gmailView = UIView()
-    var passwordView = UIView()
-    var gmailValue = UITextField()
-    var passwordValue = UITextField()
-    
-    
-   @objc func textFieldDidBeginEditing(_ textField: UITextField) {
+
+   func textFieldDidBeginEditing(_ textField: UITextField) {
         
         if (textField.tag == 1) {
-            gmailView.layer.borderColor = UIColor(rgb: 0x009a3d).cgColor
+            usernameView.layer.borderColor = appColor.cgColor
             passwordView.layer.borderColor = myColor.cgColor
             
         }else if (textField.tag == 2) {
-            gmailView.layer.borderColor = myColor.cgColor
+            usernameView.layer.borderColor = myColor.cgColor
             passwordView.layer.borderColor = appColor.cgColor
             
         }else {
-            gmailView.layer.borderColor = myColor.cgColor
+            usernameView.layer.borderColor = myColor.cgColor
             passwordView.layer.borderColor = myColor.cgColor
         
         }
         
     }
-    func showPopup(animated: Bool = true , result  :String) {
+    override func showPopup(animated: Bool = true , result  :String) {
         
         // Prepare the popup assets
         
@@ -59,42 +75,88 @@ class ViewController: UIViewController,UITextFieldDelegate {
         self.present(popup, animated: animated, completion: nil)
     }
     
+    func isValidUser() throws -> Bool
+    {
+        
+        guard let userName = usernameTextField.text , userName.count != 0 else{
+            throw LoginError.emailEmpty
+        }
+        guard let password = passwordTextField.text, password.count != 0 else{
+            throw LoginError.passwordEmpty
+        }
+        guard let passwordLength = passwordTextField.text, passwordLength.count > 5 else{
+            throw LoginError.passwordLength
+        }
+        if !userName.isEmail()
+        {
+            throw LoginError.emailError
+        }
+        
+        
+        return true
+    }
+    @IBAction func loginButton(_ sender: Any) {
+        do {
+            let isValid = try self.isValidUser()
+            
+            if isValid{
+            
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+                self.present(vc, animated: false, completion: nil)
+            }
+        }
+        
+        catch LoginError.emailEmpty{
+
+            self.defaultAlert(message: "", title: "Please enter your username or email address")
+            
+        }
+        catch LoginError.emailError{
+            
+            self.defaultAlert(message: "", title: "Please enter a valid email address")
+        }
+        catch LoginError.passwordEmpty{
+            
+            self.defaultAlert(message: "", title: "Please enter your password")
+        }
+        catch LoginError.passwordLength{
+            self.defaultAlert(message: "", title: "Password should be atleast 6 characters long.")
+        }
+        catch let error1 as NSError {
+        }
+        
+        //        self.showPopup(result: "You have successfully logged in")
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupView()
-        
-        // Do any additional setup after loading th_rom a nib.
+        loginButton.layer.cornerRadius = 35
+        usernameView.layer.borderWidth = 2
+        passwordView.layer.borderWidth = 2
+        usernameView.layer.cornerRadius = 10
+        passwordView.layer.cornerRadius = 10
+        usernameView.layer.borderColor = UIColor(rgb: 0xd1d1d1).cgColor
+        passwordView.layer.borderColor = UIColor(rgb: 0xd1d1d1).cgColor
+        usernameTextField.tag = 1
+        passwordTextField.tag = 2
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
 
-    @objc func loginClicked(sender:UIButton!) {
-        
-//        self.showPopup(result: "You have successfully logged in")
-//        let transition = CATransition()
-//        transition.duration = 0.3
-//        transition.type = kCATransitionPush
-//        transition.subtype = kCATransitionFromRight
-//        transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
-//        view.window!.layer.add(transition, forKey: kCATransition)
-
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
-        self.present(vc, animated: false, completion: nil)
-        
-    }
-    @objc func forgotButtonClicked(sender:UIButton!) {
+    
+    @IBAction func forgotButton(_ sender: Any) {
         print("forgotButtonClicked")
-        
     }
     
-    @objc func guestButtonClicked(sender:UIButton!) {
+    @IBAction func guestButton(_ sender: Any) {
         print("guestButtonClicked")
-        
     }
     
-    
-    @objc func signUpButtonClicked(sender:UIButton!) {
+   @IBAction func signUpButton(_ sender: Any) {
         
         let transition = CATransition()
         transition.duration = 0.3
@@ -111,97 +173,32 @@ class ViewController: UIViewController,UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-   
     
-    func setupView() {
-        
-        let effectiveWidth = (self.view.frame.width)
-        let effectiveHeight = (self.view.frame.height)
-        
-        var icon  = UIImageView()
-        icon.frame = CGRect(x: ((2.65/8)*(effectiveWidth)), y: ((1/16)*(effectiveHeight)), width: ((2.7/8)*(effectiveWidth)), height: ((4/16)*(effectiveHeight)))
-        icon.layer.cornerRadius = 50
-        icon.image = UIImage(named: "icon")
-        view.addSubview(icon)
-        
-        var gmailView = UIView()
-        gmailView.frame = CGRect(x: ((2/20)*(effectiveWidth)), y: ((6/16)*(effectiveHeight)), width: ((16/20)*(effectiveWidth)), height: ((1.2/16)*(effectiveHeight)))
-        gmailView.layer.cornerRadius = 10
-        gmailView.layer.borderColor = myColor.cgColor
-        gmailView.layer.borderWidth = 2
-        view.addSubview(gmailView)
-        
-        var gmailValue = UITextField()
-        gmailValue.frame = CGRect(x: ((2.4/20)*(effectiveWidth)), y: ((6.2/16)*(effectiveHeight)), width: ((15.2/20)*(effectiveWidth)), height: ((0.8/16)*(effectiveHeight)))
-        gmailValue.placeholder = "username or email id"
-        gmailValue.tag = 1
-        view.addSubview(gmailValue)
-
-        var passwordView = UIView()
-        passwordView.frame = CGRect(x: ((2/20)*(effectiveWidth)), y: ((8/16)*(effectiveHeight)), width: ((16/20)*(effectiveWidth)), height: ((1.2/16)*(effectiveHeight)))
-        passwordView.layer.cornerRadius = 10
-        passwordView.layer.borderColor = myColor.cgColor
-        passwordView.layer.borderWidth = 2
-        view.addSubview(passwordView)
-        
-        var passwordValue = UITextField()
-        passwordValue.frame = CGRect(x: ((2.6/20)*(effectiveWidth)), y: ((8.2/16)*(effectiveHeight)), width: ((14.8/20)*(effectiveWidth)), height: ((0.8/16)*(effectiveHeight)))
-        passwordValue.placeholder = "Password"
-        passwordValue.tag = 2
-        view.addSubview(passwordValue)
-
-        gmailValue.delegate = self
-        passwordValue.delegate = self
-        
-        var loginButton = UIButton()
-        loginButton.frame = CGRect(x: ((effectiveWidth/2)-((effectiveHeight)*(0.75/16))), y: ((10/16)*(effectiveHeight)), width: ((1.5/16)*(effectiveHeight)), height: ((1.5/16)*(effectiveHeight)))
-        loginButton.setImage(UIImage(named: "arrow"), for: .normal)
-        loginButton.addTarget(self, action: #selector(loginClicked), for: UIControlEvents.touchUpInside)
-        loginButton.layer.cornerRadius = ((1/16)*(effectiveHeight))
-        loginButton.setTitleColor(UIColor.white, for: .normal)
-        loginButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        view.addSubview(loginButton)
-        
-        var forgotButton = UIButton()
-        forgotButton.frame = CGRect(x: ((1/4)*(effectiveWidth)), y: ((11.7/16)*(effectiveHeight)), width: ((2/4)*(effectiveWidth)), height: ((0.8/16)*(effectiveHeight)))
-        forgotButton.setTitle("Forgot Password?", for: .normal)
-        forgotButton.addTarget(self, action: #selector(forgotButtonClicked), for: UIControlEvents.touchUpInside)
-        forgotButton.setTitleColor(appColor, for: .normal)
-        forgotButton.contentHorizontalAlignment = .center
-        forgotButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        forgotButton.titleLabel?.minimumScaleFactor = 0.2
-        view.addSubview(forgotButton)
-        
-        var guestButton = UIButton()
-        guestButton.frame = CGRect(x: 0, y: ((14/16)*(effectiveHeight)), width: ((1/2)*(effectiveWidth)), height: ((2/16)*(effectiveHeight)))
-        guestButton.setTitle("GUEST", for: .normal)
-        guestButton.addTarget(self, action: #selector(guestButtonClicked), for: UIControlEvents.touchUpInside)
-        guestButton.setTitleColor(UIColor.black, for: .normal)
-        guestButton.contentHorizontalAlignment = .center
-        guestButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        guestButton.titleLabel?.minimumScaleFactor = 0.2
-        view.addSubview(guestButton)
-        
-        
-        var crossView = UIView()
-        crossView.frame = CGRect(x: ((10/20)*(effectiveWidth)), y: ((14.25/16)*(effectiveHeight)), width: 1, height: ((1.5/16)*(effectiveHeight)))
-        crossView.backgroundColor = UIColor(rgb: 0x009a3d)
-        view.addSubview(crossView)
-
-        var newAccountButton = UIButton()
-        newAccountButton.frame = CGRect(x: (((1/2)*(effectiveWidth))+1), y: ((14/16)*(effectiveHeight)), width: ((1/2)*(effectiveWidth)), height: ((2/16)*(effectiveHeight)))
-        newAccountButton.setTitle("NEW ACCOUNT", for: .normal)
-        newAccountButton.addTarget(self, action: #selector(signUpButtonClicked), for: UIControlEvents.touchUpInside)
-        newAccountButton.setTitleColor(UIColor.black, for: .normal)
-        newAccountButton.contentHorizontalAlignment = .center
-        newAccountButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-        newAccountButton.titleLabel?.minimumScaleFactor = 0.2
-        view.addSubview(newAccountButton)
-        
-       
-    }
+//    func requestTwotrLoginApi() {
+//        let param = ["username" : self.usernameTxt.text ?? "", "password" : self.passwordTxt?.text ?? "" ,"deviceType" : "ios" ,"deviceId" : DeviceHelpers.deviceID()] as [String : Any]
+//
+//        print(param)
+//        twotrAPI.login(param:param as Dictionary<String, AnyObject>) { (success, jsonObject) in
+//            self.didEndLoadingContent()
+//            print(jsonObject!)
+//
+//            if success
+//            {
+//                guard let error = jsonObject?["err"] , error == nil else{ // Login failed
+//                    return
+//                }
+//                //                self.checkUser(dict: jsonObject! as! NSDictionary)
+//                //                 UserData.sharedInstance.accessToken = jsonObject.value( forKeyPath: "token" )! as? String
+//                self.dismissLoginVC(json: jsonObject!)
+//            }else{
+//                self.defaultAlert(message: "", title: jsonObject?["message"] as! String)
+//            }
+//        }
+//
+//    }
+    
     
    
+    
 }
 

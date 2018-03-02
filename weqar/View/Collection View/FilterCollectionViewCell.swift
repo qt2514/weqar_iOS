@@ -20,6 +20,8 @@ class FilterCollectionViewCell: UICollectionViewCell {
         
         filterLabel.frame = CGRect(x:0, y: 10 , width: filterLabel.frame.size.width + 10 , height: 30)
         filterLabel.font = UIFont.boldSystemFont(ofSize: 12.0)
+        filterLabel.layer.cornerRadius = 10
+        filterLabel.clipsToBounds = true
         filterLabel.backgroundColor = UIColor(rgb: 0x009a3d)
         filterLabel.textAlignment = .center
         filterLabel.sizeToFit()

@@ -61,7 +61,7 @@ class DiscountViewController: UIViewController,UICollectionViewDataSource,UIColl
         layout.minimumLineSpacing = 10
 
         let myCollectionView:UICollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        myCollectionView.frame = CGRect(x: 0, y: 90 , width: view.frame.size.width, height: view.frame.size.height - 139)
+        myCollectionView.frame = CGRect(x: 0, y: 90 + 50 , width: view.frame.size.width, height: view.frame.size.height - 189)
         myCollectionView.dataSource = self
         myCollectionView.delegate = self
         myCollectionView.register(DiscountCollectionViewCell.self, forCellWithReuseIdentifier: "discountCell")
