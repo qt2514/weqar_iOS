@@ -22,8 +22,9 @@ class BaseViewController  : UIViewController
     
     @IBOutlet weak var popupView: UIView!
     
-   //siva// var twotrAPI = TwotrAPI()
+    var weqarAPI = WeqarAPI()
     var topTitle : String = ""
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()

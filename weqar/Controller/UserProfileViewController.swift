@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.swift
+//  UserProfileViewController.swift
 //  weqar
 //
 //  Created by veena on 2/19/18.
@@ -9,7 +9,9 @@
 import UIKit
 import DropDown
 
-class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+class UserProfileViewController: UIViewController,UITextFieldDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    
+    @IBOutlet weak var headingLabel: UILabel!
     
     let dropDown = DropDown()
     var anotherColor = UIColor(red: 0.0/255.0, green: 154.0/255.0, blue: 61.0/255.0, alpha: 1.0)
@@ -45,7 +47,7 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "packageCell", for: indexPath as IndexPath) as! PackageCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "packageCell", for: indexPath as IndexPath) as! UserPackageCollectionViewCell
         cell.priceLabel.text = rates[indexPath.row]
         return cell
     }
@@ -57,7 +59,6 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
     func textFieldDidBeginEditing(_ textField: UITextField) {
             self.resetColor()
             if (textField.tag == 1) {
-                print("ajksdgfkjhvf")
                 firstNameView.backgroundColor = UIColor(rgb: 0x009a3d)
                 firstNameView.layer.borderColor = anotherColor.cgColor
     
@@ -362,6 +363,8 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         dropDown.show()
     }
     @objc func basicNextButton(sender:UIButton!) {
+        headingLabel.text = "Professional"
+        
         var viewOne = UIView()
         viewOne.frame = CGRect(x: 0, y: 90 + (view.frame.size.width/6), width: (view.frame.size.width/4), height: 02)
         viewOne.backgroundColor = UIColor(rgb: 0x009a3d)
@@ -492,6 +495,8 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
     }
 }
     @objc func professionalNextButton(sender:UIButton!) {
+        headingLabel.text = "Complete"
+        
         var viewOne = UIView()
         viewOne.frame = CGRect(x: 0, y: 90 + (view.frame.size.width/6), width: (view.frame.size.width/4), height: 02)
         viewOne.backgroundColor = UIColor(rgb: 0x009a3d)
@@ -550,7 +555,7 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
         packageCollectionView.frame = CGRect(x: 0, y: 0 , width: view.frame.size.width , height: view.frame.size.height - (150 + (view.frame.size.width/3)))
         packageCollectionView.dataSource = self
         packageCollectionView.delegate = self
-        packageCollectionView.register(PackageCollectionViewCell.self, forCellWithReuseIdentifier: "packageCell")
+        packageCollectionView.register(UserPackageCollectionViewCell.self, forCellWithReuseIdentifier: "packageCell")
         packageCollectionView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         packageCollectionView.showsVerticalScrollIndicator = false
         packageCollectionView.showsHorizontalScrollIndicator = false
@@ -571,7 +576,7 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UICollectionVi
     }
     @objc func completeButton(sender:UIButton!) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "UserTabBarViewController") as! UserTabBarViewController
         self.present(vc, animated: false, completion: nil)
     }
     override func didReceiveMemoryWarning() {

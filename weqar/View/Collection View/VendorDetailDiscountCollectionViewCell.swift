@@ -1,18 +1,18 @@
 //
-//  DetailDiscountCollectionViewCell.swift
+//  VendorDetailDiscountCollectionViewCell.swift
 //  weqar
 //
-//  Created by veena on 2/28/18.
+//  Created by veena on 3/5/18.
 //  Copyright © 2018 Quaticstech. All rights reserved.
 //
 
 import UIKit
 
-class DetailDiscountCollectionViewCell: UICollectionViewCell {
+class VendorDetailDiscountCollectionViewCell: UICollectionViewCell {
     
     var anotherColor = UIColor(red: 0.0/255.0, green: 154.0/255.0, blue: 61.0/255.0, alpha: 1.0)
     var basicColor = UIColor(red: 209.0/255.0, green: 209.0/255.0, blue: 209.0/255.0,alpha: 1.0)
-
+    
     var cellView: UIImageView = {
         var img = UIImageView()
         return img
@@ -70,14 +70,14 @@ class DetailDiscountCollectionViewCell: UICollectionViewCell {
         profileImage.layer.borderWidth = 2
         profileImage.clipsToBounds = true
         cellView.addSubview(profileImage)
-
+        
         offer.frame = CGRect(x:(cellView.frame.size.width/5) + 20, y: (cellView.frame.size.height * 0.55) - ((cellView.frame.size.width/5) + 10), width: (cellView.frame.size.width) - ((cellView.frame.size.width/5) + 30), height: 30)
         offer.font = UIFont.boldSystemFont(ofSize: 18.0)
         offer.textAlignment = .left
         offer.text = "75% Discount on KFC"
         offer.textColor = .white
         cellView.addSubview(offer)
-
+        
         period.frame = CGRect(x:(cellView.frame.size.width/5) + 20, y: (cellView.frame.size.height * 0.55) - ((cellView.frame.size.width/5) + 10) + 23, width: (cellView.frame.size.width) - ((cellView.frame.size.width/5) + 30), height: 25)
         period.font = UIFont.boldSystemFont(ofSize: 16.0)
         period.adjustsFontSizeToFitWidth = true
@@ -89,7 +89,7 @@ class DetailDiscountCollectionViewCell: UICollectionViewCell {
         star.frame = CGRect(x: (cellView.frame.size.width/5) + 20, y: (cellView.frame.size.height * 0.55) - ((cellView.frame.size.width/5) + 10) + 47, width: 80, height: 15)
         star.image = UIImage(named:"star")
         cellView.addSubview(star)
-
+        
         contentLabel.frame = CGRect(x:10, y: (cellView.frame.size.height * 0.55) + 10 , width: ((cellView.frame.size.width) - 20), height: cellView.frame.size.height - ((cellView.frame.size.height * 0.55) + 70))
         contentLabel.font = UIFont.systemFont(ofSize: 14)
         //        contentLabel.textContent.textAlignment = NSTextAlignment.Left
@@ -122,3 +122,4 @@ class DetailDiscountCollectionViewCell: UICollectionViewCell {
     }
     
 }
+

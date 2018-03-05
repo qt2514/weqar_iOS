@@ -1,17 +1,17 @@
 //
-//  JobsCollectionViewCell.swift
+//  VendorJobsCollectionViewCell.swift
 //  weqar
 //
-//  Created by veena on 2/27/18.
+//  Created by veena on 3/5/18.
 //  Copyright © 2018 Quaticstech. All rights reserved.
 //
 
 import UIKit
 
-class JobsCollectionViewCell: UICollectionViewCell {
+class VendorJobsCollectionViewCell: UICollectionViewCell {
     var anotherColor = UIColor(red: 0.0/255.0, green: 154.0/255.0, blue: 61.0/255.0, alpha: 1.0)
     var basicColor = UIColor(red: 209.0/255.0, green: 209.0/255.0, blue: 209.0/255.0,alpha: 1.0)
-
+    
     var cellView: UIImageView = {
         var img = UIImageView()
         return img
@@ -80,9 +80,9 @@ class JobsCollectionViewCell: UICollectionViewCell {
         contentLabel.frame = CGRect(x:((self.frame.size.width) * 0.25) + 30, y: 45 , width: ((self.frame.size.width) - (((self.frame.size.width) * 0.25) + 60)) , height: self.frame.size.height - 75)
         contentLabel.font = UIFont.systemFont(ofSize: 14)
         contentLabel.numberOfLines = 8
-        contentLabel.text = "If this is your first Subscription Plan it will be considered the Main Subscription Plan (Parent Subscription Plan). All other Subscription Plans that you will create will be Upgrades or Downgrades of this Main Plan (Parent Subscription Plan). If this is your first Subscription Plan it will be considered the Main Subscription Plan (Parent Subscription Plan). All other Subscription Plans that you will create will be Upgrades or Downgrades of this Main Plan (Parent Subscription Plan)If this is your first Subscription Plan it will be considered the Main Subscription Plan (Parent Subscription Plan). All other Subscription Plans that you will create will be Upgrades or Downgrades of this Main Plan (Parent Subscription Plan). If this is your first Subscription Plan it will be considered the Main Subscription Plan (Parent Subscription Plan). All other Subscription Plans that you will create will be Upgrades or Downgrades of this Main Plan (Parent Subscription Plan)"
+        contentLabel.text = "If this is your first Subscription Plan it will be considered the Main Subscription Plan (Parent Subscription Plan). All other Subscription Plans that you will create will be Upgrades or Downgrades of this Main Plan (Parent Subscription Plan). If this is your first Subscription Plan it will be considered the Main Subscription Plan (Parent Subscription Plan). All other Subscription Plans that you will create will be Upgrades or Downgrades of this Main Plan (Parent Subscription Plan)If this is your first Subscription Plan it will be considered the Main Subscription Plan (Parent Subscription Plan).If this is your first Subscription Plan it will be considered the Main Subscription Plan (Parent Subscription Plan). All other Subscription Plans that you will create will be Upgrades or Downgrades of this Main Plan (Parent Subscription Plan). If this is your first Subscription Plan it will be considered the Main Subscription Plan (Parent Subscription Plan). All other Subscription Plans that you will create will be Upgrades or Downgrades of this Main Plan (Parent Subscription Plan)If this is your first Subscription Plan it will be considered the Main Subscription Plan (Parent Subscription Plan). All other Subscription Plans that you will create will be Upgrades or Downgrades of this Main Plan (Parent Subscription Plan). If this is your first Subscription Plan it will be considered the Main Subscription Plan (Parent Subscription Plan). All other Subscription Plans that you will create will be Upgrades or Downgrades of this Main Plan (Parent Subscription Plan)"
         cellView.addSubview(contentLabel)
-
+        
         time.frame = CGRect(x:self.frame.size.width - 175, y: self.frame.size.height - 25 , width:20 , height: 20)
         time.image = UIImage(named:"time")
         cellView.addSubview(time)
@@ -104,3 +104,4 @@ class JobsCollectionViewCell: UICollectionViewCell {
     }
     
 }
+

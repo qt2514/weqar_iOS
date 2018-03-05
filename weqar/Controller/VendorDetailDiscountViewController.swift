@@ -1,20 +1,20 @@
 //
-//  DetailDiscountViewController.swift
+//  VendorDetailDiscountViewController.swift
 //  weqar
 //
-//  Created by veena on 2/27/18.
+//  Created by veena on 3/5/18.
 //  Copyright © 2018 Quaticstech. All rights reserved.
 //
 
 import UIKit
 
-class DetailDiscountViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class VendorDetailDiscountViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "detailDiscountCell", for: indexPath as IndexPath) as! DetailDiscountCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "detailDiscountCell", for: indexPath as IndexPath) as! VendorDetailDiscountCollectionViewCell
         return cell
     }
     
@@ -35,7 +35,7 @@ class DetailDiscountViewController: UIViewController,UICollectionViewDelegate,UI
         myCollectionView.frame = CGRect(x: 0, y: 100 , width: view.frame.size.width , height: view.frame.size.height - 200)
         myCollectionView.dataSource = self
         myCollectionView.delegate = self
-        myCollectionView.register(DetailDiscountCollectionViewCell.self, forCellWithReuseIdentifier: "detailDiscountCell")
+        myCollectionView.register(VendorDetailDiscountCollectionViewCell.self, forCellWithReuseIdentifier: "detailDiscountCell")
         myCollectionView.backgroundColor = UIColor.white.withAlphaComponent(0.0)
         myCollectionView.showsVerticalScrollIndicator = false
         myCollectionView.showsHorizontalScrollIndicator = false
@@ -44,10 +44,11 @@ class DetailDiscountViewController: UIViewController,UICollectionViewDelegate,UI
         myCollectionView.translatesAutoresizingMaskIntoConstraints = false
         edgesForExtendedLayout = []
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
-
+    
 }
+

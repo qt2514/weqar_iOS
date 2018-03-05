@@ -7,23 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		030F04AA2035AEE3000553D6 /* DiscountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F04A92035AEE3000553D6 /* DiscountCollectionViewCell.swift */; };
+		030D0AE02049D62400C8C268 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D0ADF2049D62400C8C268 /* Request.swift */; };
+		030D0AE42049D6CE00C8C268 /* WeqarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D0AE32049D6CE00C8C268 /* WeqarAPI.swift */; };
+		030F04AA2035AEE3000553D6 /* UserDiscountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F04A92035AEE3000553D6 /* UserDiscountCollectionViewCell.swift */; };
 		031F2A7C202996B9008B1EA1 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F2A7B202996B9008B1EA1 /* UIColor.swift */; };
 		031F2A862029E405008B1EA1 /* VideoSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031F2A852029E405008B1EA1 /* VideoSplashViewController.swift */; };
-		032DEE4B2045B549000654DC /* DetailDiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DEE4A2045B549000654DC /* DetailDiscountViewController.swift */; };
-		032DEE4D20461E7C000654DC /* DetailDiscountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DEE4C20461E7A000654DC /* DetailDiscountCollectionViewCell.swift */; };
-		03392E062044A32600F4508A /* AccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03392E052044A32500F4508A /* AccountSettingsViewController.swift */; };
-		03392E082044A34300F4508A /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03392E072044A34300F4508A /* ProfileSettingsViewController.swift */; };
-		03392E0B2044B19900F4508A /* JobsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03392E0A2044B19900F4508A /* JobsCollectionViewCell.swift */; };
-		033FCFE1203D9F9C001F4F1C /* PackageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033FCFE0203D9F9B001F4F1C /* PackageCollectionViewCell.swift */; };
-		035E34CE2034CD5000E0D952 /* DiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E34CD2034CD5000E0D952 /* DiscountViewController.swift */; };
-		035E34D02034DA5F00E0D952 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E34CF2034DA5F00E0D952 /* TabBarViewController.swift */; };
-		037310D6203B123400ECD2A8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037310D5203B123400ECD2A8 /* ProfileViewController.swift */; };
-		037310D8203B509F00ECD2A8 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037310D7203B509F00ECD2A8 /* EventViewController.swift */; };
-		037310DA203B50B300ECD2A8 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037310D9203B50B300ECD2A8 /* JobsViewController.swift */; };
-		037310DC203B50CB00ECD2A8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037310DB203B50CB00ECD2A8 /* SettingsViewController.swift */; };
-		037310E6203C4E5B00ECD2A8 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037310E5203C4E5B00ECD2A8 /* FilterCollectionViewCell.swift */; };
-		03774FD12045AFCF0080A7EF /* DetailJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03774FD02045AFCF0080A7EF /* DetailJobsViewController.swift */; };
+		032DEE4B2045B549000654DC /* UserDetailDiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DEE4A2045B549000654DC /* UserDetailDiscountViewController.swift */; };
+		032DEE4D20461E7C000654DC /* UserDetailDiscountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032DEE4C20461E7A000654DC /* UserDetailDiscountCollectionViewCell.swift */; };
+		03392E062044A32600F4508A /* UserAccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03392E052044A32500F4508A /* UserAccountSettingsViewController.swift */; };
+		03392E0B2044B19900F4508A /* UserJobsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03392E0A2044B19900F4508A /* UserJobsCollectionViewCell.swift */; };
+		033FCFE1203D9F9C001F4F1C /* UserPackageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033FCFE0203D9F9B001F4F1C /* UserPackageCollectionViewCell.swift */; };
+		035B1EC3204C604800A918AC /* VendorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B1EC2204C604800A918AC /* VendorProfileViewController.swift */; };
+		035B1EC5204CCDBF00A918AC /* VendorTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B1EC4204CCDBF00A918AC /* VendorTabBarViewController.swift */; };
+		035B1EC7204CCDFC00A918AC /* VendorDiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B1EC6204CCDFC00A918AC /* VendorDiscountViewController.swift */; };
+		035B1EC9204CCE4E00A918AC /* VendorDetailJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B1EC8204CCE4E00A918AC /* VendorDetailJobsViewController.swift */; };
+		035B1ECB204CCEAB00A918AC /* VendorDetailDiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B1ECA204CCEAB00A918AC /* VendorDetailDiscountViewController.swift */; };
+		035B1ECD204CCED300A918AC /* VendorJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B1ECC204CCED300A918AC /* VendorJobsViewController.swift */; };
+		035B1ECF204CCEF400A918AC /* VendorSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B1ECE204CCEF400A918AC /* VendorSettingsViewController.swift */; };
+		035B1ED1204CCF0F00A918AC /* VendorAccountSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B1ED0204CCF0F00A918AC /* VendorAccountSettingsViewController.swift */; };
+		035B1ED3204CCF4A00A918AC /* UserProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B1ED2204CCF4A00A918AC /* UserProfileSettingsViewController.swift */; };
+		035B1ED5204CCFBE00A918AC /* VendorEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B1ED4204CCFBE00A918AC /* VendorEventViewController.swift */; };
+		035B1ED7204CD00400A918AC /* VendorProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B1ED6204CD00400A918AC /* VendorProfileSettingsViewController.swift */; };
+		035B1ED9204CD1AD00A918AC /* VendorDiscountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B1ED8204CD1AD00A918AC /* VendorDiscountCollectionViewCell.swift */; };
+		035B1EDB204CD1D100A918AC /* VendorDetailDiscountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B1EDA204CD1D100A918AC /* VendorDetailDiscountCollectionViewCell.swift */; };
+		035B1EDD204CD20A00A918AC /* VendorJobsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B1EDC204CD20A00A918AC /* VendorJobsCollectionViewCell.swift */; };
+		035B1EDF204CD22800A918AC /* VendorPackageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B1EDE204CD22800A918AC /* VendorPackageCollectionViewCell.swift */; };
+		035B1EE1204CD24700A918AC /* VendorFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035B1EE0204CD24700A918AC /* VendorFilterCollectionViewCell.swift */; };
+		035E34CE2034CD5000E0D952 /* UserDiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E34CD2034CD5000E0D952 /* UserDiscountViewController.swift */; };
+		035E34D02034DA5F00E0D952 /* UserTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035E34CF2034DA5F00E0D952 /* UserTabBarViewController.swift */; };
+		037310D6203B123400ECD2A8 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037310D5203B123400ECD2A8 /* UserProfileViewController.swift */; };
+		037310D8203B509F00ECD2A8 /* UserEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037310D7203B509F00ECD2A8 /* UserEventViewController.swift */; };
+		037310DA203B50B300ECD2A8 /* UserJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037310D9203B50B300ECD2A8 /* UserJobsViewController.swift */; };
+		037310DC203B50CB00ECD2A8 /* UserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037310DB203B50CB00ECD2A8 /* UserSettingsViewController.swift */; };
+		037310E6203C4E5B00ECD2A8 /* UserFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037310E5203C4E5B00ECD2A8 /* UserFilterCollectionViewCell.swift */; };
+		03774FD12045AFCF0080A7EF /* UserDetailJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03774FD02045AFCF0080A7EF /* UserDetailJobsViewController.swift */; };
 		03A992A1204813E400148303 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A992A0204813E400148303 /* BaseViewController.swift */; };
 		03A992A920482E9F00148303 /* ContentLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A992A820482E9F00148303 /* ContentLoadingView.xib */; };
 		03A992AB20482EA200148303 /* UIContentLoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A992AA20482EA200148303 /* UIContentLoadingIndicatorView.swift */; };
@@ -64,25 +81,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		030F04A92035AEE3000553D6 /* DiscountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountCollectionViewCell.swift; sourceTree = "<group>"; };
+		030D0ADF2049D62400C8C268 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		030D0AE32049D6CE00C8C268 /* WeqarAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeqarAPI.swift; sourceTree = "<group>"; };
+		030F04A92035AEE3000553D6 /* UserDiscountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDiscountCollectionViewCell.swift; sourceTree = "<group>"; };
 		031F2A7B202996B9008B1EA1 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		031F2A852029E405008B1EA1 /* VideoSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSplashViewController.swift; sourceTree = "<group>"; };
 		031F2A882029E8B0008B1EA1 /* SwiftyGif.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyGif.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		031F2A892029EC1A008B1EA1 /* splashVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = splashVideo.mp4; sourceTree = "<group>"; };
-		032DEE4A2045B549000654DC /* DetailDiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDiscountViewController.swift; sourceTree = "<group>"; };
-		032DEE4C20461E7A000654DC /* DetailDiscountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDiscountCollectionViewCell.swift; sourceTree = "<group>"; };
-		03392E052044A32500F4508A /* AccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsViewController.swift; sourceTree = "<group>"; };
-		03392E072044A34300F4508A /* ProfileSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewController.swift; sourceTree = "<group>"; };
-		03392E0A2044B19900F4508A /* JobsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsCollectionViewCell.swift; sourceTree = "<group>"; };
-		033FCFE0203D9F9B001F4F1C /* PackageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageCollectionViewCell.swift; sourceTree = "<group>"; };
-		035E34CD2034CD5000E0D952 /* DiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewController.swift; sourceTree = "<group>"; };
-		035E34CF2034DA5F00E0D952 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		037310D5203B123400ECD2A8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		037310D7203B509F00ECD2A8 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
-		037310D9203B50B300ECD2A8 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
-		037310DB203B50CB00ECD2A8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		037310E5203C4E5B00ECD2A8 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
-		03774FD02045AFCF0080A7EF /* DetailJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailJobsViewController.swift; sourceTree = "<group>"; };
+		032DEE4A2045B549000654DC /* UserDetailDiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailDiscountViewController.swift; sourceTree = "<group>"; };
+		032DEE4C20461E7A000654DC /* UserDetailDiscountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailDiscountCollectionViewCell.swift; sourceTree = "<group>"; };
+		03392E052044A32500F4508A /* UserAccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountSettingsViewController.swift; sourceTree = "<group>"; };
+		03392E0A2044B19900F4508A /* UserJobsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJobsCollectionViewCell.swift; sourceTree = "<group>"; };
+		033FCFE0203D9F9B001F4F1C /* UserPackageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPackageCollectionViewCell.swift; sourceTree = "<group>"; };
+		035B1EC2204C604800A918AC /* VendorProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorProfileViewController.swift; sourceTree = "<group>"; };
+		035B1EC4204CCDBF00A918AC /* VendorTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorTabBarViewController.swift; sourceTree = "<group>"; };
+		035B1EC6204CCDFC00A918AC /* VendorDiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorDiscountViewController.swift; sourceTree = "<group>"; };
+		035B1EC8204CCE4E00A918AC /* VendorDetailJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorDetailJobsViewController.swift; sourceTree = "<group>"; };
+		035B1ECA204CCEAB00A918AC /* VendorDetailDiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorDetailDiscountViewController.swift; sourceTree = "<group>"; };
+		035B1ECC204CCED300A918AC /* VendorJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorJobsViewController.swift; sourceTree = "<group>"; };
+		035B1ECE204CCEF400A918AC /* VendorSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorSettingsViewController.swift; sourceTree = "<group>"; };
+		035B1ED0204CCF0F00A918AC /* VendorAccountSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorAccountSettingsViewController.swift; sourceTree = "<group>"; };
+		035B1ED2204CCF4A00A918AC /* UserProfileSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileSettingsViewController.swift; sourceTree = "<group>"; };
+		035B1ED4204CCFBE00A918AC /* VendorEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorEventViewController.swift; sourceTree = "<group>"; };
+		035B1ED6204CD00400A918AC /* VendorProfileSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorProfileSettingsViewController.swift; sourceTree = "<group>"; };
+		035B1ED8204CD1AD00A918AC /* VendorDiscountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorDiscountCollectionViewCell.swift; sourceTree = "<group>"; };
+		035B1EDA204CD1D100A918AC /* VendorDetailDiscountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorDetailDiscountCollectionViewCell.swift; sourceTree = "<group>"; };
+		035B1EDC204CD20A00A918AC /* VendorJobsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorJobsCollectionViewCell.swift; sourceTree = "<group>"; };
+		035B1EDE204CD22800A918AC /* VendorPackageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorPackageCollectionViewCell.swift; sourceTree = "<group>"; };
+		035B1EE0204CD24700A918AC /* VendorFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		035E34CD2034CD5000E0D952 /* UserDiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDiscountViewController.swift; sourceTree = "<group>"; };
+		035E34CF2034DA5F00E0D952 /* UserTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTabBarViewController.swift; sourceTree = "<group>"; };
+		037310D5203B123400ECD2A8 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		037310D7203B509F00ECD2A8 /* UserEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEventViewController.swift; sourceTree = "<group>"; };
+		037310D9203B50B300ECD2A8 /* UserJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJobsViewController.swift; sourceTree = "<group>"; };
+		037310DB203B50CB00ECD2A8 /* UserSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewController.swift; sourceTree = "<group>"; };
+		037310E5203C4E5B00ECD2A8 /* UserFilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		03774FD02045AFCF0080A7EF /* UserDetailJobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailJobsViewController.swift; sourceTree = "<group>"; };
 		03A992A0204813E400148303 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		03A992A820482E9F00148303 /* ContentLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentLoadingView.xib; sourceTree = "<group>"; };
 		03A992AA20482EA200148303 /* UIContentLoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIContentLoadingIndicatorView.swift; sourceTree = "<group>"; };
@@ -149,6 +183,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		030D0ADE2049D5F700C8C268 /* ServiceRequest */ = {
+			isa = PBXGroup;
+			children = (
+				030D0ADF2049D62400C8C268 /* Request.swift */,
+				030D0AE32049D6CE00C8C268 /* WeqarAPI.swift */,
+			);
+			path = ServiceRequest;
+			sourceTree = "<group>";
+		};
 		030F04A72035AEAF000553D6 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,11 +204,16 @@
 		030F04A82035AEB8000553D6 /* Collection View */ = {
 			isa = PBXGroup;
 			children = (
-				030F04A92035AEE3000553D6 /* DiscountCollectionViewCell.swift */,
-				032DEE4C20461E7A000654DC /* DetailDiscountCollectionViewCell.swift */,
-				03392E0A2044B19900F4508A /* JobsCollectionViewCell.swift */,
-				033FCFE0203D9F9B001F4F1C /* PackageCollectionViewCell.swift */,
-				037310E5203C4E5B00ECD2A8 /* FilterCollectionViewCell.swift */,
+				030F04A92035AEE3000553D6 /* UserDiscountCollectionViewCell.swift */,
+				035B1ED8204CD1AD00A918AC /* VendorDiscountCollectionViewCell.swift */,
+				032DEE4C20461E7A000654DC /* UserDetailDiscountCollectionViewCell.swift */,
+				035B1EDA204CD1D100A918AC /* VendorDetailDiscountCollectionViewCell.swift */,
+				03392E0A2044B19900F4508A /* UserJobsCollectionViewCell.swift */,
+				035B1EDC204CD20A00A918AC /* VendorJobsCollectionViewCell.swift */,
+				033FCFE0203D9F9B001F4F1C /* UserPackageCollectionViewCell.swift */,
+				035B1EDE204CD22800A918AC /* VendorPackageCollectionViewCell.swift */,
+				037310E5203C4E5B00ECD2A8 /* UserFilterCollectionViewCell.swift */,
+				035B1EE0204CD24700A918AC /* VendorFilterCollectionViewCell.swift */,
 			);
 			path = "Collection View";
 			sourceTree = "<group>";
@@ -255,11 +303,11 @@
 			isa = PBXGroup;
 			children = (
 				031F2A892029EC1A008B1EA1 /* splashVideo.mp4 */,
-				03A992A0204813E400148303 /* BaseViewController.swift */,
 				03F1E4982034452A003F5C3F /* weqar.gif */,
 				03B709CB202882DD007C374A /* Controller */,
 				031F2A7920299661008B1EA1 /* Extension */,
 				031F2A832029E3D5008B1EA1 /* Others */,
+				030D0ADE2049D5F700C8C268 /* ServiceRequest */,
 				030F04A72035AEAF000553D6 /* View */,
 				03B7099D2028825F007C374A /* AppDelegate.swift */,
 				03B709A12028825F007C374A /* Main.storyboard */,
@@ -293,16 +341,27 @@
 			isa = PBXGroup;
 			children = (
 				03B709CE202886D9007C374A /* signUpViewController.swift */,
-				035E34CF2034DA5F00E0D952 /* TabBarViewController.swift */,
-				035E34CD2034CD5000E0D952 /* DiscountViewController.swift */,
-				03774FD02045AFCF0080A7EF /* DetailJobsViewController.swift */,
-				032DEE4A2045B549000654DC /* DetailDiscountViewController.swift */,
-				037310D9203B50B300ECD2A8 /* JobsViewController.swift */,
-				037310DB203B50CB00ECD2A8 /* SettingsViewController.swift */,
-				03392E052044A32500F4508A /* AccountSettingsViewController.swift */,
-				03392E072044A34300F4508A /* ProfileSettingsViewController.swift */,
-				037310D7203B509F00ECD2A8 /* EventViewController.swift */,
-				037310D5203B123400ECD2A8 /* ProfileViewController.swift */,
+				03A992A0204813E400148303 /* BaseViewController.swift */,
+				035E34CF2034DA5F00E0D952 /* UserTabBarViewController.swift */,
+				035B1EC4204CCDBF00A918AC /* VendorTabBarViewController.swift */,
+				035E34CD2034CD5000E0D952 /* UserDiscountViewController.swift */,
+				035B1EC6204CCDFC00A918AC /* VendorDiscountViewController.swift */,
+				03774FD02045AFCF0080A7EF /* UserDetailJobsViewController.swift */,
+				035B1EC8204CCE4E00A918AC /* VendorDetailJobsViewController.swift */,
+				032DEE4A2045B549000654DC /* UserDetailDiscountViewController.swift */,
+				035B1ECA204CCEAB00A918AC /* VendorDetailDiscountViewController.swift */,
+				037310D9203B50B300ECD2A8 /* UserJobsViewController.swift */,
+				035B1ECC204CCED300A918AC /* VendorJobsViewController.swift */,
+				037310DB203B50CB00ECD2A8 /* UserSettingsViewController.swift */,
+				035B1ECE204CCEF400A918AC /* VendorSettingsViewController.swift */,
+				03392E052044A32500F4508A /* UserAccountSettingsViewController.swift */,
+				035B1ED0204CCF0F00A918AC /* VendorAccountSettingsViewController.swift */,
+				035B1ED2204CCF4A00A918AC /* UserProfileSettingsViewController.swift */,
+				035B1ED6204CD00400A918AC /* VendorProfileSettingsViewController.swift */,
+				037310D7203B509F00ECD2A8 /* UserEventViewController.swift */,
+				035B1ED4204CCFBE00A918AC /* VendorEventViewController.swift */,
+				037310D5203B123400ECD2A8 /* UserProfileViewController.swift */,
+				035B1EC2204C604800A918AC /* VendorProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -650,30 +709,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				035E34CE2034CD5000E0D952 /* DiscountViewController.swift in Sources */,
-				03774FD12045AFCF0080A7EF /* DetailJobsViewController.swift in Sources */,
+				035E34CE2034CD5000E0D952 /* UserDiscountViewController.swift in Sources */,
+				03774FD12045AFCF0080A7EF /* UserDetailJobsViewController.swift in Sources */,
 				03A992B3204861E700148303 /* String+Convenience.swift in Sources */,
 				03A992B1204861E400148303 /* String.swift in Sources */,
+				035B1EC5204CCDBF00A918AC /* VendorTabBarViewController.swift in Sources */,
 				03B709A02028825F007C374A /* ViewController.swift in Sources */,
-				03392E062044A32600F4508A /* AccountSettingsViewController.swift in Sources */,
-				032DEE4D20461E7C000654DC /* DetailDiscountCollectionViewCell.swift in Sources */,
+				035B1ED3204CCF4A00A918AC /* UserProfileSettingsViewController.swift in Sources */,
+				035B1EC3204C604800A918AC /* VendorProfileViewController.swift in Sources */,
+				03392E062044A32600F4508A /* UserAccountSettingsViewController.swift in Sources */,
+				032DEE4D20461E7C000654DC /* UserDetailDiscountCollectionViewCell.swift in Sources */,
 				03A992A1204813E400148303 /* BaseViewController.swift in Sources */,
 				031F2A7C202996B9008B1EA1 /* UIColor.swift in Sources */,
+				035B1EC7204CCDFC00A918AC /* VendorDiscountViewController.swift in Sources */,
 				03B7099E2028825F007C374A /* AppDelegate.swift in Sources */,
-				035E34D02034DA5F00E0D952 /* TabBarViewController.swift in Sources */,
-				032DEE4B2045B549000654DC /* DetailDiscountViewController.swift in Sources */,
-				037310D8203B509F00ECD2A8 /* EventViewController.swift in Sources */,
-				03392E082044A34300F4508A /* ProfileSettingsViewController.swift in Sources */,
+				035E34D02034DA5F00E0D952 /* UserTabBarViewController.swift in Sources */,
+				035B1ED7204CD00400A918AC /* VendorProfileSettingsViewController.swift in Sources */,
+				032DEE4B2045B549000654DC /* UserDetailDiscountViewController.swift in Sources */,
+				035B1ED1204CCF0F00A918AC /* VendorAccountSettingsViewController.swift in Sources */,
+				035B1ED9204CD1AD00A918AC /* VendorDiscountCollectionViewCell.swift in Sources */,
+				030D0AE02049D62400C8C268 /* Request.swift in Sources */,
+				035B1EDD204CD20A00A918AC /* VendorJobsCollectionViewCell.swift in Sources */,
+				037310D8203B509F00ECD2A8 /* UserEventViewController.swift in Sources */,
+				035B1EC9204CCE4E00A918AC /* VendorDetailJobsViewController.swift in Sources */,
 				031F2A862029E405008B1EA1 /* VideoSplashViewController.swift in Sources */,
+				035B1ECD204CCED300A918AC /* VendorJobsViewController.swift in Sources */,
+				035B1EDF204CD22800A918AC /* VendorPackageCollectionViewCell.swift in Sources */,
 				03A992AB20482EA200148303 /* UIContentLoadingIndicatorView.swift in Sources */,
-				033FCFE1203D9F9C001F4F1C /* PackageCollectionViewCell.swift in Sources */,
-				03392E0B2044B19900F4508A /* JobsCollectionViewCell.swift in Sources */,
-				037310D6203B123400ECD2A8 /* ProfileViewController.swift in Sources */,
-				030F04AA2035AEE3000553D6 /* DiscountCollectionViewCell.swift in Sources */,
-				037310DA203B50B300ECD2A8 /* JobsViewController.swift in Sources */,
+				035B1ED5204CCFBE00A918AC /* VendorEventViewController.swift in Sources */,
+				033FCFE1203D9F9C001F4F1C /* UserPackageCollectionViewCell.swift in Sources */,
+				03392E0B2044B19900F4508A /* UserJobsCollectionViewCell.swift in Sources */,
+				035B1EDB204CD1D100A918AC /* VendorDetailDiscountCollectionViewCell.swift in Sources */,
+				035B1EE1204CD24700A918AC /* VendorFilterCollectionViewCell.swift in Sources */,
+				037310D6203B123400ECD2A8 /* UserProfileViewController.swift in Sources */,
+				035B1ECB204CCEAB00A918AC /* VendorDetailDiscountViewController.swift in Sources */,
+				030F04AA2035AEE3000553D6 /* UserDiscountCollectionViewCell.swift in Sources */,
+				037310DA203B50B300ECD2A8 /* UserJobsViewController.swift in Sources */,
 				03B709CF202886D9007C374A /* signUpViewController.swift in Sources */,
-				037310E6203C4E5B00ECD2A8 /* FilterCollectionViewCell.swift in Sources */,
-				037310DC203B50CB00ECD2A8 /* SettingsViewController.swift in Sources */,
+				035B1ECF204CCEF400A918AC /* VendorSettingsViewController.swift in Sources */,
+				030D0AE42049D6CE00C8C268 /* WeqarAPI.swift in Sources */,
+				037310E6203C4E5B00ECD2A8 /* UserFilterCollectionViewCell.swift in Sources */,
+				037310DC203B50CB00ECD2A8 /* UserSettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

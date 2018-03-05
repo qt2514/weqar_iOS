@@ -1,5 +1,5 @@
 //
-//  DiscountCollectionViewCell.swift
+//  UserDiscountCollectionViewCell.swift
 //  weqar
 //
 //  Created by veena on 2/15/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DiscountCollectionViewCell: UICollectionViewCell {
+class UserDiscountCollectionViewCell: UICollectionViewCell {
     
     var anotherColor = UIColor(red: 0.0/255.0, green: 154.0/255.0, blue: 61.0/255.0, alpha: 1.0)
     var basicColor = UIColor(red: 209.0/255.0, green: 209.0/255.0, blue: 209.0/255.0,alpha: 1.0)

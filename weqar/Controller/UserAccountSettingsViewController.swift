@@ -1,5 +1,5 @@
 //
-//  AccountSettingsViewController.swift
+//  UserAccountSettingsViewController.swift
 //  weqar
 //
 //  Created by veena on 2/27/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AccountSettingsViewController: UIViewController {
+class UserAccountSettingsViewController: UIViewController {
     @IBAction func clickBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
         

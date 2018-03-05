@@ -1,14 +1,14 @@
 //
-//  JobsViewController.swift
+//  VendorJobsViewController.swift
 //  weqar
 //
-//  Created by veena on 2/20/18.
+//  Created by veena on 3/5/18.
 //  Copyright © 2018 Quaticstech. All rights reserved.
 //
 
 import UIKit
 
-class JobsViewController: UIViewController,UITextFieldDelegate,UICollectionViewDataSource,UICollectionViewDelegate {
+class VendorJobsViewController: UIViewController,UITextFieldDelegate,UICollectionViewDataSource,UICollectionViewDelegate {
     
     @IBOutlet weak var searchRightConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchLeftConstraint: NSLayoutConstraint!
@@ -27,26 +27,26 @@ class JobsViewController: UIViewController,UITextFieldDelegate,UICollectionViewD
         }
         return true
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jobCell", for: indexPath as IndexPath) as! JobsCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "jobCell", for: indexPath as IndexPath) as! VendorJobsCollectionViewCell
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DetailJobsViewController") as! DetailJobsViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "VendorDetailJobsViewController") as! VendorDetailJobsViewController
         self.present(vc, animated: false, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         searchTF.delegate = self
         searchView.layer.cornerRadius = 5
-       
+        
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = CGSize(width: view.frame.size.width - 20, height:(view.frame.size.height / 4))
@@ -57,7 +57,7 @@ class JobsViewController: UIViewController,UITextFieldDelegate,UICollectionViewD
         myCollectionView.frame = CGRect(x: 0, y: 90 , width: view.frame.size.width, height: view.frame.size.height - 139)
         myCollectionView.dataSource = self
         myCollectionView.delegate = self
-        myCollectionView.register(JobsCollectionViewCell.self, forCellWithReuseIdentifier: "jobCell")
+        myCollectionView.register(VendorJobsCollectionViewCell.self, forCellWithReuseIdentifier: "jobCell")
         myCollectionView.backgroundColor = UIColor(rgb: 0xd1d1d1)
         myCollectionView.showsVerticalScrollIndicator = false
         myCollectionView.showsHorizontalScrollIndicator = false
@@ -66,10 +66,11 @@ class JobsViewController: UIViewController,UITextFieldDelegate,UICollectionViewD
         myCollectionView.translatesAutoresizingMaskIntoConstraints = false
         edgesForExtendedLayout = []
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-       
+        
     }
-
+    
 }
+

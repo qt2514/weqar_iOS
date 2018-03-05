@@ -1,27 +1,19 @@
 //
-//  DetailJobsViewController.swift
+//  UserEventViewController.swift
 //  weqar
 //
-//  Created by veena on 2/27/18.
+//  Created by veena on 2/20/18.
 //  Copyright © 2018 Quaticstech. All rights reserved.
 //
 
 import UIKit
 
-class DetailJobsViewController: UIViewController {
-    @IBOutlet weak var updateButton: UIButton!
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBAction func clickBack(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-        
-    }
+class UserEventViewController: UIViewController {
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-    updateButton.layer.cornerRadius = 5
-    profileImage.layer.cornerRadius = 40
-    profileImage.layer.borderWidth = 2
-    profileImage.layer.borderColor = UIColor(rgb: 0x009a3d).cgColor
         
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

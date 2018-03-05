@@ -23,6 +23,8 @@ enum LoginError: Error
 
 class ViewController: BaseViewController,UITextFieldDelegate {
     
+
+    var responseallaa = NSDictionary()
     @IBOutlet weak var usernameView: UIView!
     @IBOutlet weak var passwordView: UIView!
     @IBOutlet weak var usernameTextField: UITextField!
@@ -34,6 +36,8 @@ class ViewController: BaseViewController,UITextFieldDelegate {
     
     var navigation : UINavigationController!
     
+    var dummyId = "siva"
+    var DeviceType = "ios"
     let myColor : UIColor = UIColor(rgb: 0xd1d1d1)
     let appColor : UIColor = UIColor(rgb: 0x009a3d)
 
@@ -87,7 +91,8 @@ class ViewController: BaseViewController,UITextFieldDelegate {
         guard let passwordLength = passwordTextField.text, passwordLength.count > 5 else{
             throw LoginError.passwordLength
         }
-        if !userName.isEmail()
+        //if !userName.isEmail()
+        if userName.isEmail()
         {
             throw LoginError.emailError
         }
@@ -101,9 +106,11 @@ class ViewController: BaseViewController,UITextFieldDelegate {
             
             if isValid{
             
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
-                self.present(vc, animated: false, completion: nil)
+                self.requestLoginApi()
+//
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let vc = storyboard.instantiateViewController(withIdentifier: "UserProfileViewController") as! UserProfileViewController
+//                self.present(vc, animated: false, completion: nil)
             }
         }
         
@@ -154,6 +161,9 @@ class ViewController: BaseViewController,UITextFieldDelegate {
     
     @IBAction func guestButton(_ sender: Any) {
         print("guestButtonClicked")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "VendorProfileViewController") as! VendorProfileViewController
+        self.present(vc, animated: false, completion: nil)
     }
     
    @IBAction func signUpButton(_ sender: Any) {
@@ -171,17 +181,20 @@ class ViewController: BaseViewController,UITextFieldDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
     }
     
-//    func requestTwotrLoginApi() {
-//        let param = ["username" : self.usernameTxt.text ?? "", "password" : self.passwordTxt?.text ?? "" ,"deviceType" : "ios" ,"deviceId" : DeviceHelpers.deviceID()] as [String : Any]
-//
-//        print(param)
-//        twotrAPI.login(param:param as Dictionary<String, AnyObject>) { (success, jsonObject) in
+//    func requestLoginApi()
+//    {
+//        
+//        let param = ["username" : self.usernameTextField.text!, "password" : self.passwordTextField.text, "DeviceType" : DeviceType ,"DeviceId" : dummyId ] as [String : Any]
+//        
+//        print(param);
+//        
+//        weqarAPI.login(param:param as Dictionary<String, AnyObject>) { (success, jsonObject) in
 //            self.didEndLoadingContent()
 //            print(jsonObject!)
-//
+//            
 //            if success
 //            {
 //                guard let error = jsonObject?["err"] , error == nil else{ // Login failed
@@ -189,16 +202,78 @@ class ViewController: BaseViewController,UITextFieldDelegate {
 //                }
 //                //                self.checkUser(dict: jsonObject! as! NSDictionary)
 //                //                 UserData.sharedInstance.accessToken = jsonObject.value( forKeyPath: "token" )! as? String
-//                self.dismissLoginVC(json: jsonObject!)
+//                //                self.dismissLoginVC(json: jsonObject!)
+//                let status = jsonObject?["Status"]
+//                if status == success {
+//                    self.successAlert(message: "", title: "You have successfully Logged In")
+//                    self.navigationController?.popViewController(animated: true)
+//                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                    let vc = storyboard.instantiateViewController(withIdentifier: "UserProfileViewController") as! UserProfileViewController
+//                    self.present(vc, animated: false, completion: nil)
+//
+//                }else{
+//                    self.successAlert(message: "", title: "Invalid UserName or Password")
+//                    self.navigationController?.popViewController(animated: true)
+//                }
+//                
 //            }else{
 //                self.defaultAlert(message: "", title: jsonObject?["message"] as! String)
 //            }
 //        }
-//
+//        
 //    }
     
-    
-   
+    func requestLoginApi()
+    {
+        let param = ["username" : self.usernameTextField.text!, "password" : self.passwordTextField.text, "DeviceType" : DeviceType ,"DeviceId" : dummyId ] as [String : Any]
+      
+        print(param);
+        
+        weqarAPI.login(param:param as Dictionary<String, AnyObject>) { (success, jsonObject) in
+            self.didEndLoadingContent()
+//            print(jsonObject!)
+            
+            if success
+            {
+                guard let error = jsonObject?["err"] , error == nil else{ // Login failed
+                    return
+                }
+                
+                let status:String = jsonObject?["Status"] as! String
+                let jsonV =  jsonObject as! [String : AnyObject]
+                if let responseall : NSDictionary = jsonV["Response"] as? NSDictionary{
+                       self.responseallaa = responseall
+                let usertype  = self.responseallaa.value(forKey: "UserType") as! NSString
+                print(usertype)
+                
+            if (status == "success") && (usertype == "user") {
+                
+                self.successAlert(message: "", title: "You have successfully Logged In")
+                self.navigationController?.popViewController(animated: true)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "UserProfileViewController") as! UserProfileViewController
+                self.present(vc, animated: false, completion: nil)
+                
+                }
+           else {
+                self.successAlert(message: "", title: "You have successfully Logged In")
+                self.navigationController?.popViewController(animated: true)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "VendorProfileViewController") as! VendorProfileViewController
+                self.present(vc, animated: false, completion: nil)
+            }
+            
+            }else{
+                self.successAlert(message: "", title: "Invalid UserName or Password")
+                self.navigationController?.popViewController(animated: true)
+                }
+//                return
+            }else{
+                self.defaultAlert(message: "", title: jsonObject?["message"] as! String)
+            }
+        }
+        
+    }
     
 }
 
